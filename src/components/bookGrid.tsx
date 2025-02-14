@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const books = [
   { title: "English colonies in North America", code: "SS-G4", image: "/logo/book1.png" },
@@ -23,7 +24,10 @@ const BookGrid = () => {
     <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-2 p-8 text-left">
       {books.map((book, index) => (
         <div key={index} className="flex flex-col items-start w-full h-60">
-          <img src={book.image} alt="Book Logo" className="w-24 h-32 object-contain self-start" />
+          <Image
+          width={96}
+          height={128}
+          src={book.image} alt="Book Logo" className="w-24 h-32 object-contain self-start" />
           <p style={{ color: '#2F5852' }} className="text-[10px] text-black font-medium mt-2 text-left">{book.code}</p>
           <p className="text-[18px] text-black mt-1 text-left line-clamp-2 overflow-hidden">
             {book.title}

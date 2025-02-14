@@ -103,7 +103,7 @@ export default function Footer() {
               <p className="text-gray-600 mt-2 text-xs pl-10">
                 By calling or texting (800) 511-6948, customers agree to receive
                 text messages. If you no longer wish to receive text messages,
-                you may opt-out at any time by replying "STOP."
+                you may opt-out at any time by replying &quot;STOP&quot;
               </p>
             </div>
           </div>
