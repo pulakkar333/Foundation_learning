@@ -29,13 +29,13 @@ export default function Slider({ title, data }: SliderProps) {
         <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
         <div style={{ paddingRight: "50px" }} className="flex gap-2">
           <button
-            className="p-2 bg-gray-200 rounded-full hover:bg-gray-300"
+            className="p-2 bg-white rounded-full"
             onClick={prevSlide}
           >
             <ChevronLeft size={22} className="text-gray-700" />
           </button>
           <button
-            className="p-2 bg-gray-200 rounded-full hover:bg-gray-300"
+            className="p-2 bg-white rounded-full"
             onClick={nextSlide}
           >
             <ChevronRight size={22} className="text-gray-700" />

@@ -9,18 +9,18 @@ export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white flex items-center justify-between sm:px-6 h-16">
+    <header className="bg-white flex items-center justify-between px-4 sm:px-6 h-16 w-full">
       <div className="flex items-center flex-shrink-0">
         <Image
           src="/logo/logo.png"
           alt="Foundation Learning"
           width={277}
           height={35}
-          className="w-50 sm:w-100"
+          className="w-40 sm:w-60"
         />
       </div>
 
-      <div className="w-[300px] min-w-[300px] max-w-[300px] h-full flex items-center relative mr-5">
+      <div className="hidden sm:flex w-[300px] min-w-[300px] max-w-[300px] h-full items-center relative mr-5">
         <Search className="absolute left-3 text-gray-500" size={20} />
         <input
           type="text"
@@ -30,7 +30,7 @@ export default function Navigation() {
       </div>
 
       <nav className="hidden md:flex items-center flex-shrink-0 h-full relative">
-        <Link href="#" className="text-gray-700  flex items-center pr-4">
+        <Link href="#" className="text-gray-700 flex items-center pr-4">
           Personalized Tutoring
         </Link>
         <div className="border-r-[1px] border-gray-300 h-full"></div>
@@ -40,7 +40,7 @@ export default function Navigation() {
             Courses ▾
           </button>
           <div className="absolute hidden group-hover:block bg-white shadow-md rounded-lg p-2 mt-2 w-40">
-            <Link href="#" className="block text-[#2F5852]  p-2">
+            <Link href="#" className="block text-[#2F5852] p-2">
               Course 1
             </Link>
             <Link href="#" className="block text-[#2F5852] p-2">

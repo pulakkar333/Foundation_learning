@@ -64,13 +64,13 @@ const AllClasses: React.FC = () => {
         <div className="flex gap-2">
           <button
             onClick={scrollLeft}
-            className="p-2 bg-gray-200 rounded-full hover:bg-gray-300"
+            className="p-2 bg-white rounded-full border border-gray-300"
           >
             <ChevronLeft size={22} className="text-gray-700" />
           </button>
           <button
             onClick={scrollRight}
-            className="p-2 bg-gray-200 rounded-full hover:bg-gray-300"
+            className="p-2 bg-white rounded-full border border-gray-300"
           >
             <ChevronRight size={22} className="text-gray-700" />
           </button>
