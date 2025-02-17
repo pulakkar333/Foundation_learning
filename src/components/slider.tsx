@@ -14,9 +14,10 @@ interface ClassItem {
 interface SliderProps {
   title: string;
   data: ClassItem[];
+  className?:string;
 }
 
-export default function Slider({ title, data }: SliderProps) {
+export default function Slider({ title, data, className }: SliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % data.length);
@@ -25,19 +26,15 @@ export default function Slider({ title, data }: SliderProps) {
 
   return (
     <div className="mt-6 w-full pb-0 bg-[#dff2f5]">
-      <div className="flex justify-between items-center px-4 md:px-0">
-        <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
+      <div className="flex justify-between items-center md:px-0">
+        <h2 className={`text-lg font-semibold text-gray-800 ${className}`}>
+          {title}
+        </h2>
         <div style={{ paddingRight: "50px" }} className="flex gap-2">
-          <button
-            className="p-2 bg-white rounded-full"
-            onClick={prevSlide}
-          >
+          <button className="p-2 bg-white rounded-full" onClick={prevSlide}>
             <ChevronLeft size={22} className="text-gray-700" />
           </button>
-          <button
-            className="p-2 bg-white rounded-full"
-            onClick={nextSlide}
-          >
+          <button className="p-2 bg-white rounded-full" onClick={nextSlide}>
             <ChevronRight size={22} className="text-gray-700" />
           </button>
         </div>
@@ -67,7 +64,7 @@ export default function Slider({ title, data }: SliderProps) {
                     <span className="bg-[#FFF48F] text-xs font-semibold px-2 py-1 rounded-full text-gray-800">
                       SS-G4
                     </span>
-                    <h3 className="text-lg font-medium text-gray-800">
+                    <h3 className="text-lg font-medium text-gray-800 font-cormorant">
                       {classItem.topic}
                     </h3>
                   </div>
@@ -117,3 +114,4 @@ export default function Slider({ title, data }: SliderProps) {
     </div>
   );
 }
+

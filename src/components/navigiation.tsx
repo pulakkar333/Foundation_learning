@@ -9,7 +9,7 @@ export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white flex items-center justify-between px-4 sm:px-6 h-16 w-full">
+    <header className="bg-white flex items-center justify-between px-4 sm:px-6 h-16 w-full font-dm">
       <div className="flex items-center flex-shrink-0">
         <Image
           src="/logo/logo.png"
@@ -29,7 +29,7 @@ export default function Navigation() {
         />
       </div>
 
-      <nav className="hidden md:flex items-center flex-shrink-0 h-full relative">
+      <nav className="hidden md:flex items-center flex-shrink-0 h-full relative font-dm">
         <Link href="#" className="text-gray-700 flex items-center pr-4">
           Personalized Tutoring
         </Link>
@@ -73,7 +73,7 @@ export default function Navigation() {
       </button>
 
       {menuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center py-4 space-y-4 md:hidden z-50">
+        <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center py-4 space-y-4 md:hidden z-50 font-dm">
           <div className="relative w-11/12">
             <Search className="absolute left-3 top-3 text-gray-500" size={20} />
             <input

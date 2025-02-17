@@ -47,7 +47,7 @@ export default function HeroSection() {
         style={{ paddingLeft: "80px", paddingRight: "375px" }}
       >
         <div className="flex flex-col md:flex-row md:justify-between space-y-6 md:space-y-0">
-          <h1 className="text-3xl sm:text-4xl font-light text-gray-900 mt-4">
+          <h1 className="text-3xl sm:text-4xl font-light text-gray-900 mt-4 font-cormorant">
             Hello <em className="italic">Emma</em>,<br /> Welcome Back!
           </h1>
 
@@ -85,7 +85,7 @@ export default function HeroSection() {
       </div>
 
       <div style={{ paddingLeft: "80px", paddingRight: "50px" }}>
-        <Slider title="Recent Classes" data={classes} />
+        <Slider title="Recent Classes" data={classes} className="font-cormorant" />
       </div>
     </div>
   );
