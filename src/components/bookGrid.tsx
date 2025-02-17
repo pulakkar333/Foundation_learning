@@ -29,7 +29,7 @@ const BookGrid = () => {
           height={128}
           src={book.image} alt="Book Logo" className="w-24 h-32 object-contain self-start" />
           <p style={{ color: '#2F5852' }} className="text-[10px] text-black font-medium mt-2 text-left">{book.code}</p>
-          <p className="text-[18px] text-black mt-1 text-left line-clamp-2 overflow-hidden">
+          <p className="text-[18px] text-black mt-1 text-left line-clamp-2 overflow-hidden font-cormorant">
             {book.title}
           </p>
         </div>
