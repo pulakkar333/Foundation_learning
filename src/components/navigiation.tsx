@@ -9,7 +9,7 @@ export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white flex items-center justify-between px-4 sm:px-6 h-16 w-full font-dm">
+    <header className="bg-white flex items-center sm:px-6 h-[60px] w-full font-dm">
       <div className="flex items-center flex-shrink-0">
         <Image
           src="/logo/logo.png"
@@ -20,7 +20,7 @@ export default function Navigation() {
         />
       </div>
 
-      <div className="hidden sm:flex w-[300px] min-w-[300px] max-w-[300px] h-full items-center relative mr-5">
+      <div className="hidden sm:flex w-[300px] min-w-[300px] max-w-[300px] h-full items-center relative mr-[146px]">
         <Search className="absolute left-3 text-gray-500" size={20} />
         <input
           type="text"
