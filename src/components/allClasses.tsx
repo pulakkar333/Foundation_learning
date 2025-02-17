@@ -17,13 +17,12 @@ const ClassCard: React.FC<ClassCardProps> = ({
 }) => {
   return (
     <div
-      className={`border-t border-b py-4 px-4 flex flex-col items-start shadow-sm ${
-        active ? "bg-teal-100 border-teal-300" : "bg-white border-gray-300"
-      }`}
+      className={`border-t border-b py-4 px-4 flex flex-col items-start shadow-sm ${active ? "bg-teal-100 border-teal-300" : "bg-white border-gray-300"}`}
       style={{
         borderLeft: "2px solid #e5e7eb",
         borderRight: "2px solid #e5e7eb",
         flexShrink: 0,
+        fontFamily: "Cormorant Garamond, serif", // Apply font here
       }}
     >
       <h3 className="text-lg font-semibold text-[#1F2937]">{title}</h3>
@@ -53,7 +52,7 @@ const AllClasses: React.FC = () => {
   };
 
   return (
-    <div className="p-6 relative">
+    <div className="p-6 relative" style={{ fontFamily: "Cormorant Garamond, serif" }}> {/* Apply font to parent */}
       <div
         style={{ paddingLeft: "60px", paddingRight: "79px" }}
         className="py-4 mb-4 flex justify-between"
