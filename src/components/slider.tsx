@@ -60,8 +60,22 @@ export default function Slider({ title, data, className }: SliderProps) {
                 />
 
                 <div className="flex flex-col justify-center items-center sm:items-start space-y-2">
-                  <div className="flex flex-col items-center sm:items-start mb-[30px]">
-                    <span className="bg-[#FFF48F] text-xs font-semibold px-2 py-1 rounded-full text-gray-800">
+                  <div className="flex flex-col items-center sm:items-start mt-[16px] ">
+                  <span
+                      className="text-xs font-semibold text-gray-800"
+                      style={{
+                        borderRadius: "100px",
+                        backgroundColor: "#FFF48F",
+                        width: "77.029px",
+                        height: "32.065px",
+                        padding: "7px 14px",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        gap: "10px",
+                        display: "flex",
+                        flexShrink: 0,
+                      }}
+                    >
                       SS-G4
                     </span>
                     <h3 className="text-lg font-medium text-gray-800 font-cormorant">
