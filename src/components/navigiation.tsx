@@ -1,10 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Search } from "lucide-react";
-import { ChevronDown } from "lucide-react";
+import { Search, ChevronDown } from "lucide-react";
 
 export default function Navigation() {
   return (
