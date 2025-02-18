@@ -156,13 +156,13 @@ export default function HeroSection() {
           }}
         />
       </div>
-      {/* <div style={{ paddingLeft: "80px", paddingRight: "50px" }}>
+      <div style={{ paddingLeft: "80px", paddingRight: "50px" }}>
         <Slider
           title="Recent Classes"
           data={classes}
           className="font-cormorant"
         />
-      </div> */}
+      </div>
     </div>
   );
 }
