@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { ArrowRight, ArrowLeft, Play } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 import Image from "next/image";
 
 interface ClassItem {
