@@ -1,7 +1,6 @@
 "use client";
 import Slider from "../components/slider";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import logoImage from "/path/to/people-arrows.png";
 
 const classes = [
   {
