@@ -47,7 +47,7 @@ const ClassCard: React.FC<ClassCardProps> = ({
       </h3>
       <div className="flex items-center mt-2 px-2 w-full">
         <span
-          className="flex flex-shrink-0 items-center justify-center w-[77.029px] h-[32.065px] px-[14px] py-[7px] rounded-full bg-[#FFF48F] mr-2"
+          className="flex flex-shrink-0 items-center justify-center w-[77.029px] h-[32.065px] px-[14px] py-[7px] rounded-full bg-[#FFF48F] mr-2 font-dm"
           style={{
             transform: "rotate(-0.092deg)",
             overflow: "hidden",

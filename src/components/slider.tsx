@@ -81,11 +81,10 @@ export default function Slider({ title, data, className }: SliderProps) {
                 <i className="fa-solid fa-people-arrows text-[#2F5852] opacity-40"></i>
 
                 <div className="flex flex-col justify-center items-center sm:items-start space-y-2">
-                  <div className="flex flex-col items-center sm:items-start mt-[16px] ">
+                  <div className="flex flex-col items-center sm:items-start mb-[16px] ">
                     <span
                       className="flex flex-shrink-0 items-center justify-center w-[77.029px] h-[32.065px] px-[14px] py-[7px] rounded-full bg-[#FFF48F]"
                       style={{
-                        gap: "10px",
                         transform: "rotate(-0.092deg)",
                         overflow: "hidden",
                         textAlign: "right",
@@ -103,7 +102,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                       SS-G4
                     </span>
 
-                    <h3 className="text-lg font-medium text-gray-800 font-cormorant">
+                    <h3 className="text-lg font-medium text-gray-800 font-cormorant mt-2">
                       {classItem.topic}
                     </h3>
                   </div>
