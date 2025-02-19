@@ -28,9 +28,20 @@ export default function Slider({ title, data, className }: SliderProps) {
   return (
     <div className="mt-6 w-full pb-0 bg-[#dff2f5]">
       <div className="flex justify-between items-center md:px-0">
-        <h2 className={`text-lg font-semibold text-gray-800 ${className}`}>
+        <h2
+          className={`text-lg font-semibold ${className}`}
+          style={{
+            color: "#12353D",
+            fontFamily: '"Cormorant Garamond", serif',
+            fontSize: "35px",
+            fontStyle: "normal",
+            fontWeight: 500,
+            lineHeight: "normal",
+          }}
+        >
           {title}
         </h2>
+
         <div style={{ paddingRight: "50px" }} className="flex gap-2">
           <button
             className="w-[38px] h-[38px] p-2 bg-white rounded-full"
@@ -67,7 +78,7 @@ export default function Slider({ title, data, className }: SliderProps) {
         </div>
       </div>
 
-      <div className="relative w-full overflow-hidden mt-2">
+      <div className="relative w-full overflow-hidden mt-[22px]">
         <div
           className="flex transition-transform duration-1000"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -115,7 +126,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                 </div>
 
                 <div className="flex flex-col justify-center items-center sm:items-start space-y-2">
-                  <div className="flex flex-col items-center sm:items-start mb-[60px] ">
+                  <div className="flex flex-col items-center sm:items-start mb-[80px] ">
                     <span
                       className="flex flex-shrink-0 items-center justify-center w-[77.029px] h-[32.065px] px-[14px] py-[7px] rounded-full bg-[#FFF48F]"
                       style={{
