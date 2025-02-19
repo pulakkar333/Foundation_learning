@@ -9,6 +9,7 @@ interface ClassItem {
   color: string;
   topic: string;
   image: string;
+  code: string;
 }
 
 interface SliderProps {
@@ -31,7 +32,10 @@ export default function Slider({ title, data, className }: SliderProps) {
           {title}
         </h2>
         <div style={{ paddingRight: "50px" }} className="flex gap-2">
-          <button className="w-[38px] h-[38px] p-2 bg-white rounded-full" onClick={prevSlide}>
+          <button
+            className="w-[38px] h-[38px] p-2 bg-white rounded-full"
+            onClick={prevSlide}
+          >
             <ArrowLeft
               size={18}
               className="text-gray-700"
@@ -44,7 +48,10 @@ export default function Slider({ title, data, className }: SliderProps) {
               }}
             />
           </button>
-          <button className="w-[38px] h-[38px] p-2 bg-white rounded-full" onClick={nextSlide}>
+          <button
+            className="w-[38px] h-[38px] p-2 bg-white rounded-full"
+            onClick={nextSlide}
+          >
             <ArrowRight
               size={18}
               className="text-gray-700"
@@ -60,7 +67,7 @@ export default function Slider({ title, data, className }: SliderProps) {
         </div>
       </div>
 
-      <div className="relative w-full overflow-hidden mt-4">
+      <div className="relative w-full overflow-hidden mt-2">
         <div
           className="flex transition-transform duration-1000"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -70,18 +77,45 @@ export default function Slider({ title, data, className }: SliderProps) {
               key={index}
               className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 px-2 flex-shrink-0 border-r border-gray-300"
             >
-              <div className="bg-[#dff2f5] p-4 flex flex-col items-center sm:flex-row sm:space-x-4 w-full h-auto pb-0 mb-0">
-                <Image
-                  src={classItem.image}
-                  alt={classItem.title}
-                  width={161}
-                  height={238}
-                  className="w-auto h-36 object-cover shadow-md"
-                />
-                <i className="fa-solid fa-people-arrows text-[#2F5852] opacity-40"></i>
+              <div className="bg-[#dff2f5] p- flex flex-col items-center sm:flex-row sm:space-x-4 w-full h-auto pb-0 mb-0">
+                <div className="relative">
+                  <Image
+                    src={classItem.image}
+                    alt={classItem.title}
+                    width={163}
+                    height={245}
+                    className="object-cover shadow-md"
+                  />
+                  <div className="absolute inset-0 flex flex-col justify-center items-center bg-opacity-50">
+                    <i
+                      className="fa-solid fa-people-arrows mr-[120px] mb-2"
+                      style={{
+                        color: "#FFF",
+                        fontSize: "42px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "normal",
+                      }}
+                    ></i>
+                    <h3
+                      className="text-white mt-4 mr-[40px]"
+                      style={{
+                        width: "111px",
+                        color: "#FFF",
+                        fontFamily: '"Cormorant Garamond", serif',
+                        fontSize: "24px",
+                        fontStyle: "normal",
+                        fontWeight: 500,
+                        lineHeight: "normal",
+                      }}
+                    >
+                      {classItem.title}
+                    </h3>
+                  </div>
+                </div>
 
                 <div className="flex flex-col justify-center items-center sm:items-start space-y-2">
-                  <div className="flex flex-col items-center sm:items-start mb-[16px] ">
+                  <div className="flex flex-col items-center sm:items-start mb-[60px] ">
                     <span
                       className="flex flex-shrink-0 items-center justify-center w-[77.029px] h-[32.065px] px-[14px] py-[7px] rounded-full bg-[#FFF48F]"
                       style={{
@@ -99,7 +133,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                         WebkitLineClamp: 1,
                       }}
                     >
-                      SS-G4
+                      {classItem.code}
                     </span>
 
                     <h3 className="text-lg font-medium text-gray-800 font-cormorant mt-2">

@@ -9,6 +9,7 @@ const classes = [
     color: "bg-indigo-500",
     topic: "English Colonies",
     image: "/logo/Frame_1.png",
+    code: "SS-G4",
   },
   {
     title: "Fourth Grade Math",
@@ -16,6 +17,7 @@ const classes = [
     color: "bg-blue-500",
     topic: "Place Value",
     image: "/logo/Frame_2.png",
+    code:"MA-G4",
   },
   {
     title: "Fourth Grade Language Art",
@@ -23,6 +25,7 @@ const classes = [
     color: "bg-orange-500",
     topic: "Text Structure",
     image: "/logo/Frame_3.png",
+    code:"MA-G4",
   },
   {
     title: "Fourth Grade Science",
@@ -30,6 +33,7 @@ const classes = [
     color: "bg-green-500",
     topic: "Ecosystem",
     image: "/logo/Frame_1.png",
+    code:"SC-G4",
   },
   {
     title: "Fourth Grade Life Skills",
@@ -37,6 +41,7 @@ const classes = [
     color: "bg-purple-500",
     topic: "Critical Thinking",
     image: "/logo/Frame_2.png",
+    code:"HI-G4"
   },
 ];
 
