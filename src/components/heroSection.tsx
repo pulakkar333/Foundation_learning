@@ -83,7 +83,7 @@ export default function HeroSection() {
               <button
                 className="inline-flex items-center justify-center gap-2 px-2 py-2 text-sm text-[#2F5852] rounded-[8px]"
                 style={{
-                  boxShadow: "0px 6px 10px 0px rgba(47, 88, 82, 0.10)",
+                  // boxShadow: "0px 6px 10px 0px rgba(47, 88, 82, 0.10)",
                 }}
               >
                 <span
