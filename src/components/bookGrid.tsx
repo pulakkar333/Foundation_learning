@@ -49,7 +49,7 @@ const books = [
 
 const BookGrid = () => {
   return (
-    <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-2 p-8 text-left">
+    <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-[40px] p-8 text-left">
       {books.map((book, index) => (
         <div key={index} className="flex flex-col items-start w-full h-60">
           <Image
@@ -60,12 +60,35 @@ const BookGrid = () => {
             className=" object-contain self-start"
           />
           <p
-            style={{ color: "#2F5852" }}
-            className="text-[10px] text-black font-medium mt-2 text-left"
+            className="text-[14px] text-left font-dm-sans font-normal overflow-hidden text-ellipsis mt-2"
+            style={{
+              color: "rgba(47, 88, 82, 0.60)",
+              display: "-webkit-box",
+              WebkitBoxOrient: "vertical",
+              WebkitLineClamp: 1,
+              textOverflow: "ellipsis",
+              transform: "rotate(-0.092deg)",
+              lineHeight: "normal",
+            }}
           >
             {book.code}
           </p>
-          <p className="text-[18px] text-black mt-1 text-left line-clamp-2 overflow-hidden font-cormorant">
+
+          <p
+            className="text-[18px] text-left font-cormorant font-medium overflow-hidden text-ellipsis mt-2"
+            style={{
+              width: "180px",
+              height: "20px",
+              flexShrink: 0,
+              color: "#12353D",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
+              fontFamily: "'Cormorant Garamond', serif",
+              fontWeight: 500,
+              letterSpacing: "-0.54px",
+              lineHeight: "normal",
+            }}
+          >
             {book.title}
           </p>
         </div>

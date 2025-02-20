@@ -6,7 +6,7 @@ const classes = [
   {
     title: "Fourth Grade Social Studies",
     progress: 35,
-    color: "bg-indigo-500",
+
     topic: "English Colonies",
     images: ["/logo/cover-back.png", "/logo/pages.png", "/logo/Frame_1.png"],
     code: "SS-G4",
@@ -14,7 +14,7 @@ const classes = [
   {
     title: "Fourth Grade Math",
     progress: 60,
-    color: "bg-green-500",
+ 
     topic: "Algebra Basics",
     images: ["/logo/cover-back-2.png", "/logo/pages.png", "/logo/Frame_2.png"], 
     code: "MA-G4",
@@ -22,33 +22,33 @@ const classes = [
   {
     title: "Fourth Grade Arts",
     progress: 75,
-    color: "bg-blue-500",
+  
     topic: "Physics & Chemistry",
-    images: ["/logo/cover-back-3.png", "/logo/pages.png", "/logo/Frame_3.png"], 
+    images: ["/logo/cover-back-3.png", "/logo/pages.png", "/logo/Frame_3.png"],
     code: "SCI-G4",
   },
   {
-    title: "Science & Experiments",
+    title: "Fourth Grade Social Studies",
     progress: 75,
-    color: "bg-blue-500",
+
     topic: "Physics & Chemistry",
-    images: ["/logo/Frame_3.png", "/logo/pages.png", "/logo/cover-back.png"], 
+    images: ["/logo/cover-back.png", "/logo/pages.png", "/logo/Frame_1.png"], 
     code: "SCI-G4",
   },
   {
-    title: "Science & Experiments",
+    title: "Fourth Grade Math",
     progress: 75,
-    color: "bg-blue-500",
+   
     topic: "Physics & Chemistry",
-    images: ["/logo/Frame_3.png", "/logo/pages.png", "/logo/cover-back.png"], 
+    images: ["/logo/cover-back-2.png", "/logo/pages.png", "/logo/Frame_2.png"], 
     code: "SCI-G4",
   },
   {
-    title: "Science & Experiments",
+    title: "Fourth Grade Arts",
     progress: 75,
-    color: "bg-blue-500",
+  
     topic: "Physics & Chemistry",
-    images: ["/logo/Frame_3.png", "/logo/pages.png", "/logo/cover-back.png"], 
+    images: ["/logo/cover-back-3.png", "/logo/pages.png", "/logo/Frame_3.png"],
     code: "SCI-G4",
   },
 ];
