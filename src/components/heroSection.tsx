@@ -8,40 +8,48 @@ const classes = [
     progress: 35,
     color: "bg-indigo-500",
     topic: "English Colonies",
-    image: "/logo/Frame_1.png",
+    images: ["/logo/cover-back.png", "/logo/pages.png", "/logo/Frame_1.png"],
     code: "SS-G4",
   },
   {
     title: "Fourth Grade Math",
-    progress: 13,
-    color: "bg-blue-500",
-    topic: "Place Value",
-    image: "/logo/Frame_2.png",
-    code:"MA-G4",
-  },
-  {
-    title: "Fourth Grade Language Art",
-    progress: 25,
-    color: "bg-orange-500",
-    topic: "Text Structure",
-    image: "/logo/Frame_3.png",
-    code:"MA-G4",
-  },
-  {
-    title: "Fourth Grade Science",
-    progress: 42,
+    progress: 60,
     color: "bg-green-500",
-    topic: "Ecosystem",
-    image: "/logo/Frame_1.png",
-    code:"SC-G4",
+    topic: "Algebra Basics",
+    images: ["/logo/cover-back-2.png", "/logo/pages.png", "/logo/Frame_2.png"], 
+    code: "MA-G4",
   },
   {
-    title: "Fourth Grade Life Skills",
-    progress: 50,
-    color: "bg-purple-500",
-    topic: "Critical Thinking",
-    image: "/logo/Frame_2.png",
-    code:"HI-G4"
+    title: "Fourth Grade Arts",
+    progress: 75,
+    color: "bg-blue-500",
+    topic: "Physics & Chemistry",
+    images: ["/logo/cover-back-3.png", "/logo/pages.png", "/logo/Frame_3.png"], 
+    code: "SCI-G4",
+  },
+  {
+    title: "Science & Experiments",
+    progress: 75,
+    color: "bg-blue-500",
+    topic: "Physics & Chemistry",
+    images: ["/logo/Frame_3.png", "/logo/pages.png", "/logo/cover-back.png"], 
+    code: "SCI-G4",
+  },
+  {
+    title: "Science & Experiments",
+    progress: 75,
+    color: "bg-blue-500",
+    topic: "Physics & Chemistry",
+    images: ["/logo/Frame_3.png", "/logo/pages.png", "/logo/cover-back.png"], 
+    code: "SCI-G4",
+  },
+  {
+    title: "Science & Experiments",
+    progress: 75,
+    color: "bg-blue-500",
+    topic: "Physics & Chemistry",
+    images: ["/logo/Frame_3.png", "/logo/pages.png", "/logo/cover-back.png"], 
+    code: "SCI-G4",
   },
 ];
 
@@ -82,9 +90,11 @@ export default function HeroSection() {
 
               <button
                 className="inline-flex items-center justify-center gap-2 px-2 py-2 text-sm text-[#2F5852] rounded-[8px]"
-                style={{
-                  // boxShadow: "0px 6px 10px 0px rgba(47, 88, 82, 0.10)",
-                }}
+                style={
+                  {
+                    // boxShadow: "0px 6px 10px 0px rgba(47, 88, 82, 0.10)",
+                  }
+                }
               >
                 <span
                   style={{
