@@ -29,7 +29,7 @@ export default function Footer() {
             SUBJECTS
           </h3>
 
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-[40px]">
             <ul className="w-[200px] text-[#2F5852] text-[16px] font-dm-sans font-[16px] leading-normal">
               <li>Math</li>
               <li>Science</li>
@@ -150,8 +150,8 @@ export default function Footer() {
             className="mr-auto"
             src="/logo/logo.png"
             alt="Foundation Learning"
-            width={300}
-            height={40}
+            width={276.818}
+            height={35}
           />
           <div className="mt-6 border-t pt-6 text-center text-sm"></div>
           <p className="mt-2 text-[#2F5852] text-[16px] font-dm-sans font-normal leading-normal">
