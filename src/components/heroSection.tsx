@@ -10,6 +10,7 @@ const classes = [
     topic: "English Colonies",
     images: ["/logo/cover-back.png", "/logo/pages.png", "/logo/Frame_1.png"],
     code: "SS-G4",
+    svgIcon: "/logo/people-arrows.svg",
   },
   {
     title: "Fourth Grade Math",
@@ -18,14 +19,16 @@ const classes = [
     topic: "Algebra Basics",
     images: ["/logo/cover-back-2.png", "/logo/pages.png", "/logo/Frame_2.png"], 
     code: "MA-G4",
+    svgIcon: "/logo/function.svg",
   },
   {
-    title: "Fourth Grade Arts",
+    title: "Fourth Grade Language Arts",
     progress: 75,
     color: "bg-blue-500",
     topic: "Physics & Chemistry",
     images: ["/logo/cover-back-3.png", "/logo/pages.png", "/logo/Frame_3.png"],
     code: "SCI-G4",
+    svgIcon: "/logo/input-text.svg",
   },
   {
     title: "Fourth Grade Social Studies",
@@ -34,6 +37,7 @@ const classes = [
     topic: "Physics & Chemistry",
     images: ["/logo/cover-back.png", "/logo/pages.png", "/logo/Frame_1.png"], 
     code: "SCI-G4",
+    svgIcon: "/logo/people-arrows.svg",
   },
   {
     title: "Fourth Grade Math",
@@ -42,6 +46,7 @@ const classes = [
     topic: "Physics & Chemistry",
     images: ["/logo/cover-back-2.png", "/logo/pages.png", "/logo/Frame_2.png"], 
     code: "SCI-G4",
+    svgIcon: "/logo/people-arrows.svg",
   },
   {
     title: "Fourth Grade Arts",
@@ -50,6 +55,7 @@ const classes = [
     topic: "Physics & Chemistry",
     images: ["/logo/cover-back-3.png", "/logo/pages.png", "/logo/Frame_3.png"],
     code: "SCI-G4",
+    svgIcon: "/logo/people-arrows.svg",
   },
 ];
 

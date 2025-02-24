@@ -13,7 +13,7 @@ export default function Navigation() {
           alt="Foundation Learning"
           width={277}
           height={35}
-          className="w-60"
+          className=""
         />
         <div className="flex w-[300px] min-w-[300px] max-w-[300px] h-full items-center relative bg-[#EBF7F9]">
           <Search className="absolute left-3 text-gray-500" size={20} />

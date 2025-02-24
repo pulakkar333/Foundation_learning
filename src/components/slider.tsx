@@ -10,6 +10,7 @@ interface ClassItem {
   topic: string;
   images: string[];
   code: string;
+  svgIcon: string;
 }
 
 interface SliderProps {
@@ -107,19 +108,25 @@ export default function Slider({ title, data, className }: SliderProps) {
                     />
                   ))}
                   <div className="absolute inset-0 flex flex-col justify-center items-center bg-opacity-50">
-                    <i className="fa-solid fa-people-arrows mr-[120px] mb-2 text-white text-4xl"></i>
+                    {/* <i className="fa-solid fa-people-arrows mr-[120px] mb-[140px] text-white text-4xl fixed"></i> */}
+                    <Image
+                      src={classItem.svgIcon}
+                      alt="Custom SVG"
+                      width={48}
+                      height={48}
+                      className="mr-[120px] mb-[140px] text-white fixed"
+                    />
                     <h3
                       style={{
-                        
                         color: "#FFF",
                         fontFamily: '"Cormorant Garamond", serif',
                         fontSize: "24px",
                         fontStyle: "normal",
                         fontWeight: 500,
                         lineHeight: "normal",
-                        marginTop: "16px",
+                        marginTop: "50px",
                         textAlign: "center",
-                        marginRight: "120px",
+                        marginRight: "100px",
                       }}
                     >
                       {classItem.title}
