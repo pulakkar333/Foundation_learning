@@ -94,13 +94,13 @@ const AllClasses: React.FC = () => {
 
   return (
     <div
-      className="p-6 relative max-w-full"
+      className="relative max-w-full"
       style={{ fontFamily: "Cormorant Garamond, serif" }}
     >
-      <div className="py-4 mb-4 flex justify-between px-16">
+      <div className="py-4 mb-4 flex justify-between px-16  md:flex">
         <h2
           className="text-[35px] font-medium text-[#12353D]"
-          style={{ fontStyle: "normal", lineHeight: "normal" }}
+          style={{  fontStyle: "normal", lineHeight: "normal" }}
         >
           All of Your Classes
         </h2>
@@ -140,6 +140,7 @@ const AllClasses: React.FC = () => {
           </button>
         </div>
       </div>
+
       <div
         ref={scrollRef as React.RefObject<HTMLDivElement>}
         className="flex overflow-x-hidden scroll-smooth px-16"
@@ -162,9 +163,7 @@ const AllClasses: React.FC = () => {
             className="relative"
             style={{
               borderRight:
-                index !== arr.length - 1
-                  ? "rgba(124, 188, 200, 0.50)"
-                  : "none",
+                index !== arr.length - 1 ? "rgba(124, 188, 200, 0.50)" : "none",
             }}
           >
             <ClassCard {...classData} />

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#F5FBFC] text-gray-800 p-10 mt-[60px]">
+    <footer className="bg-[#F5FBFC] text-gray-800 p-10 mt-6">
       <div className="container mx-auto lg:grid lg:grid-cols-4 lg:gap-4 text-[12px] ">
         <div className="border-r pr-4">
           <h3
@@ -30,7 +30,7 @@ export default function Footer() {
           </h3>
 
           <div className="grid grid-cols-2 gap-[40px]">
-            <ul className="w-[200px] text-[#2F5852] text-[16px] font-dm-sans font-[16px] leading-normal">
+            <ul className="w-auto text-[#2F5852] text-[16px] font-dm-sans font-[16px] leading-normal">
               <li>Math</li>
               <li>Science</li>
               <li>English Language</li>
@@ -38,7 +38,7 @@ export default function Footer() {
               <li>Study Skills</li>
             </ul>
 
-            <ul className="w-[200px] text-[#2F5852] text-[16px] font-dm-sans font-[16px] leading-normal">
+            <ul className="w-auto text-[#2F5852] text-[16px] font-dm-sans font-[16px] leading-normal">
               <li>Algebra</li>
               <li>Geometry</li>
               <li>Precalculus</li>
@@ -71,7 +71,7 @@ export default function Footer() {
           >
             TEST PREP
           </h3>
-          <ul className="w-[200px] text-[#2F5852] text-[16px] font-dm-sans font-[16px] leading-normal">
+          <ul className="w-auto text-[#2F5852] text-[16px] font-dm-sans font-[16px] leading-normal">
             <li>SAT</li>
             <li>DSAT</li>
             <li>ACT</li>
@@ -104,12 +104,12 @@ export default function Footer() {
           >
             COLLEGE READINESS
           </h3>
-          <ul className="w-[200px] text-[#2F5852] text-[16px] font-dm-sans font-[16px] leading-normal">
+          <ul className="w-auto text-[#2F5852] text-[16px] font-dm-sans font-[16px] leading-normal">
             <li>AP</li>
             <li>IB</li>
           </ul>
         </div>
-        <div>
+        <div className="border-l px-4">
           <h3
             className="
     font-bold 
@@ -133,7 +133,7 @@ export default function Footer() {
           >
             ABOUT US
           </h3>
-          <ul className="w-[200px] text-[#2F5852] text-[16px] font-dm-sans font-[16px] leading-normal">
+          <ul className="w-auto text-[#2F5852] text-[16px] font-dm-sans font-[16px] leading-normal">
             <li>Our Process</li>
             <li>Our Results</li>
             <li>Reviews</li>
@@ -142,8 +142,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="mt-6 border-t pt-6 text-center text-sm"></div>
-
+      <div className="mt-6 border-t pt-6 text-center text-sm ml-8"></div>
       <div className="container mx-auto grid grid-cols-4 gap-4 text-sm">
         <div className="col-span-1">
           <Image
@@ -189,7 +188,7 @@ export default function Footer() {
               <p className="text-[#2F5852] font-dm-sans text-[16px] font-bold leading-normal ml-10">
                 (800) 511-6948
               </p>
-              <p className="text-[rgba(47,88,82,0.60)] font-dm-sans text-[12px] font-normal leading-normal w-[291px] mt-2 pl-10">
+              <p className="text-[rgba(47,88,82,0.60)] font-dm-sans text-[12px] font-normal leading-normal w-auto mt-2 pl-10">
                 By calling or texting (800) 511-6948, customers agree to receive
                 text messages. If you no longer wish to receive text messages,
                 you may opt out at any time by replying &quot;STOP&quot;.

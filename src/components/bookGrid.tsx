@@ -96,12 +96,9 @@ const books = [
 
 const BookGrid = () => {
   return (
-    <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-x-[40px] gap-y-[60px] p-8 text-left">
+    <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-6 p-4 md:p-8 text-left">
       {books.map((book, index) => (
-        <div
-          key={index}
-          className="flex flex-col items-start w-full h-60 relative"
-        >
+        <div key={index} className="flex flex-col items-start w-full h-auto relative">
           <div className="relative">
             <Image
               width={142}
@@ -111,20 +108,14 @@ const BookGrid = () => {
               className="object-contain self-start"
             />
             <div className="absolute inset-0 flex items-center justify-center mr-[5px] mb-[10px]">
-              <Image
-                width={91}
-                height={72}
-                src={book.svgIcon}
-                alt="SVG Icon"
-                className=""
-              />
+              <Image width={91} height={72} src={book.svgIcon} alt="SVG Icon" />
             </div>
           </div>
-          <div className="mt-4">
-            <p className="text-[14px] text-left font-normal font-dm text-[#2F585299]">
+          <div className="mt-2">
+            <p className="text-[12px] md:text-[14px] font-normal text-[#2F585299]">
               {book.code}
             </p>
-            <p className="text-[18px] text-left font-cormorant font-medium mt-2 w-[180px] h-[50px] text-[#12353D] truncate">
+            <p className="text-[14px] md:text-[18px] font-medium mt-2 max-w-[180px] h-[45px] text-[#12353D] truncate">
               {book.title}
             </p>
           </div>

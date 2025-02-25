@@ -45,7 +45,7 @@ export default function Slider({ title, data, className }: SliderProps) {
 
         <div style={{ paddingRight: "50px" }} className="flex gap-2">
           <button
-            className="w-[38px] h-[38px] p-2 bg-white rounded-full"
+            className="w-auto h-[38px] p-2 bg-white rounded-full"
             onClick={prevSlide}
           >
             <ArrowLeft
@@ -61,7 +61,7 @@ export default function Slider({ title, data, className }: SliderProps) {
             />
           </button>
           <button
-            className="w-[38px] h-[38px] p-2 bg-white rounded-full"
+            className="w-auto h-[38px] p-2 bg-white rounded-full"
             onClick={nextSlide}
           >
             <ArrowRight
@@ -108,7 +108,6 @@ export default function Slider({ title, data, className }: SliderProps) {
                     />
                   ))}
                   <div className="absolute inset-0 flex flex-col justify-center items-center bg-opacity-50">
-                    {/* <i className="fa-solid fa-people-arrows mr-[120px] mb-[140px] text-white text-4xl fixed"></i> */}
                     <Image
                       src={classItem.svgIcon}
                       alt="Custom SVG"
@@ -137,7 +136,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                 <div className="flex flex-col justify-center items-center sm:items-start space-y-2">
                   <div className="flex flex-col items-center sm:items-start mb-[50px] ">
                     <span
-                      className="flex flex-shrink-0 items-center justify-center w-[77.029px] h-[32.065px] px-[14px] py-[7px] rounded-full bg-[#FFF48F]"
+                      className="flex flex-shrink-0 items-center justify-center w-auto h-[32.065px] px-[14px] py-[7px] rounded-full bg-[#FFF48F]"
                       style={{
                         transform: "rotate(-0.092deg)",
                         overflow: "hidden",
@@ -189,7 +188,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                       </span>
                     </div>
                     <div className="relative mb-[16px]">
-                      <button className="relative flex items-center justify-center w-[135px] h-[40px] flex-shrink-0 rounded-[100px] border border-[#D6EFF2] bg-[#EBF7F9] text-[#ED801F] text-sm font-medium shadow-md">
+                      <button className="relative flex items-center justify-center w-[160px] h-[40px] flex-shrink-0 rounded-[100px] border border-[#D6EFF2] bg-[#EBF7F9] text-[#ED801F] text-sm font-medium shadow-md">
                         <span className="text-[#ED801F] font-semibold">
                           Continue
                         </span>
