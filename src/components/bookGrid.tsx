@@ -115,7 +115,7 @@ const BookGrid = () => {
             <p className="text-[12px] md:text-[14px] font-normal text-[#2F585299]">
               {book.code}
             </p>
-            <p className="text-[14px] md:text-[18px] font-medium mt-2 max-w-[180px] h-[45px] text-[#12353D] truncate">
+            <p className="text-[14px] md:text-[18px] font-medium mt-2 max-w-[200px] h-[45px] text-[#12353D] truncate">
               {book.title}
             </p>
           </div>

@@ -43,7 +43,7 @@ export default function Slider({ title, data, className }: SliderProps) {
           {title}
         </h2>
 
-        <div style={{ paddingRight: "50px" }} className="flex gap-2">
+        <div style={{ paddingRight: "25px" }} className="flex gap-2">
           <button
             className="w-auto h-[38px] p-2 bg-white rounded-full"
             onClick={prevSlide}
@@ -90,41 +90,43 @@ export default function Slider({ title, data, className }: SliderProps) {
               className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 px-2 flex-shrink-0 "
             >
               <div className="p-4 flex flex-col items-center sm:flex-row sm:space-x-4 pb-0 mb-0">
-                <div className="relative">
+                <div className="relative mr-[10px]">
                   {classItem.images.map((imgSrc, idx) => (
                     <Image
-                      key={idx}
-                      src={imgSrc}
-                      alt={`Image ${idx + 1} - ${classItem.title}`}
-                      width={163}
-                      height={245}
-                      className={`absolute ${
-                        idx === 0
-                          ? "relative top-[6px] right-[14px]"
-                          : idx === 1
-                          ? "bottom-0 left-[-16px]"
-                          : "bottom-0 right-[20px]"
-                      }`}
-                    />
+                    key={idx}
+                    src={imgSrc}
+                    alt={`Image ${idx + 1} - ${classItem.title}`}
+                    width={122.535}
+                    height={195.068}
+                    className={`absolute ${
+                      idx === 0
+                        ? "relative top-[6px] right-[14px]"
+                        : idx === 1
+                        ? "bottom-0 left-[-16px]"
+                        : "bottom-0 right-[20px]"
+                    }`}
+                    style={{ width: "122.535px", height: "195.068px" }}
+                  />
+                  
                   ))}
-                  <div className="absolute inset-0 flex flex-col justify-center items-center bg-opacity-50">
+                  <div className="absolute inset-0 flex flex-col mt-[20px] sm:mt-[25px] xl:mt-[15px]">
                     <Image
                       src={classItem.svgIcon}
                       alt="Custom SVG"
-                      width={48}
-                      height={48}
-                      className="mr-[120px] mb-[140px] text-white fixed"
+                      width={41}
+                      height={32}
+                      className="text-white xl:mb-4"
                     />
                     <h3
                       style={{
                         color: "#FFF",
                         fontFamily: '"Cormorant Garamond", serif',
-                        fontSize: "24px",
+                        fontSize: "20px",
                         fontStyle: "normal",
                         fontWeight: 500,
                         lineHeight: "normal",
-                        marginTop: "50px",
-                        textAlign: "center",
+                        marginTop: "10px",
+                        textAlign: "left",
                         marginRight: "100px",
                       }}
                     >
@@ -133,8 +135,8 @@ export default function Slider({ title, data, className }: SliderProps) {
                   </div>
                 </div>
 
-                <div className="flex flex-col justify-center items-center sm:items-start space-y-2">
-                  <div className="flex flex-col items-center sm:items-start mb-[50px] ">
+                <div className="flex flex-col justify-center">
+                  <div className="flex flex-col items-center sm:items-start ">
                     <span
                       className="flex flex-shrink-0 items-center justify-center w-auto h-[32.065px] px-[14px] py-[7px] rounded-full bg-[#FFF48F]"
                       style={{
@@ -160,7 +162,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                     </h3>
                   </div>
 
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-4 mt-[50px]">
                     <div className="relative w-12 h-12 mb-[16px]">
                       <svg className="w-full h-full" viewBox="0 0 36 36">
                         <circle

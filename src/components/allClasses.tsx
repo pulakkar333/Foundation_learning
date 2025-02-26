@@ -97,9 +97,9 @@ const AllClasses: React.FC = () => {
       className="relative max-w-full"
       style={{ fontFamily: "Cormorant Garamond, serif" }}
     >
-      <div className="py-4 mb-4 flex justify-between px-16  md:flex">
+      <div className="py-2 mb-2 flex justify-between px-16  md:flex">
         <h2
-          className="text-[35px] font-medium text-[#12353D]"
+          className="text-[35px] font-medium text-[#12353D] ml-[20px] mt-[50px]"
           style={{  fontStyle: "normal", lineHeight: "normal" }}
         >
           All of Your Classes

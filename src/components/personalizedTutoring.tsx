@@ -15,7 +15,7 @@ const PersonalizedTutoring: React.FC = () => {
           fontWeight: 500,
           lineHeight: "normal",
         }}
-        className="font-semibold"
+        className=""
       >
         Personalized Tutoring
       </h2>

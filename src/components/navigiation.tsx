@@ -9,7 +9,7 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white flex items-center justify-between px-6 h-[60px] w-full font-dm">
+    <header className=" bg-white flex items-center justify-between h-[60px] font-dm xl:px-10">
       {/* Left Section */}
       <div className="flex items-center flex-shrink-0 space-x-4 h-full">
         <Image
@@ -30,7 +30,7 @@ export default function Navigation() {
         />
 
         {/* Search Bar */}
-        <div className="hidden md:flex w-auto h-full items-center relative bg-[#EBF7F9] rounded-lg">
+        <div className="hidden md:flex w-auto h-full items-center relative bg-[#EBF7F9]">
           <Search className="absolute left-3 text-gray-500" size={20} />
           <input
             type="text"

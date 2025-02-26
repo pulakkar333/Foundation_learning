@@ -7,7 +7,7 @@ import Footer from "../components/footer";
 
 export default function Page() {
   return (
-    <div className="bg-white min-h-screen flex flex-col">
+    <div className="bg-white w-auto h-auto min-h-screen flex flex-col">
       <Head>
         <title>Foundation Learning</title>
         <meta name="description" content="An interactive learning dashboard" />
@@ -19,7 +19,7 @@ export default function Page() {
         <HeroSection />
         <AllClasses />
       </main>
-      <main style={{ paddingLeft: "70px", paddingRight: "80px" }}>
+      <main className="px-4 sm:px-8 md:px-12 lg:px-[70px] xl:px-[80px]">
         <PersonalizedTutoring />
       </main>
       <Footer />
