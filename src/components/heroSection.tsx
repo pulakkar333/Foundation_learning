@@ -63,7 +63,7 @@ export default function HeroSection() {
   return (
     <div className="bg-[#dff2f5] w-full flex flex-col px-4 md:px-10 lg:px-[80px]">
       <div className="mt-[40px]">
-        <div className="flex flex-col md:flex-row justify-between border-l border-gray-300 px-4 lg:border-hidden md:border-hidden sm:border-b sm:border-gray-300 sm:border-l-0 sm:pl-0 sm:border-b-2 sm:border-gray-300 sm:pb-0">
+        <div className="flex flex-col md:flex-row justify-between border-l border-gray-300 px-4 lg:border-hidden md:border-hidden sm:border-b sm:border-gray-300 sm:border-l-0 sm:pl-0 sm:pb-0">
           <h1 className="text-[32px] md:text-[50px] font-medium text-[#12353D] font-cormorant leading-normal md:w-auto">
             Hello <em className="italic font-normal">Emma</em>,<br /> Welcome
             Back!
