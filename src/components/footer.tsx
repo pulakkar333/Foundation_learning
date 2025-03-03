@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#F5FBFC] text-gray-800 p-6 md:p-10 mt-6">
+    <footer className="bg-[#F5FBFC] text-gray-800 p-6 md:p-10">
       <div className="container mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-4 text-[12px]">
         {/* Subjects Section */}
         <div className="border-r md:border-r pr-4">

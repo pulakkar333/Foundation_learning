@@ -17,12 +17,13 @@ const ClassCard: React.FC<ClassCardProps> = ({
 }) => {
   return (
     <div
-      className={`border-t border-b py-4 px-4 flex flex-col items-start shadow-sm ${
-        active ? "bg-teal-100 border-teal-300" : "bg-white border-gray-300"
+      className={`py-4 px-4 flex flex-col items-start shadow-sm transition-all duration-300 ${
+        active ? "bg-[#EBF7F9]" : "bg-white hover:bg-[#EBF7F9]"
       }`}
       style={{
-        borderLeft: "2px solid #e5e7eb",
-        borderRight: "2px solid #e5e7eb",
+        width: "282px",
+        height: "143px",
+        border: "1px solid rgba(124, 188, 200, 0.50)",
         flexShrink: 0,
         fontFamily: "Cormorant Garamond, serif",
         overflow: "hidden",
@@ -39,36 +40,27 @@ const ClassCard: React.FC<ClassCardProps> = ({
           display: "-webkit-box",
           WebkitBoxOrient: "vertical",
           WebkitLineClamp: 2,
-          top: 0,
-          zIndex: 10,
         }}
       >
         {title}
       </h3>
-      <div className="flex items-center mt-2 px-2 w-full">
+      <div className="flex items-center mt-2 w-full gap-[10px]">
         <span
-          className="flex flex-shrink-0 items-center justify-center w-[77.029px] h-[32.065px] px-[14px] py-[7px] rounded-full bg-[#FFF48F] mr-2 font-dm"
+          className="flex flex-shrink-0 w-[77px] h-[32px] rounded-full bg-[#FFF48F] mr-2 font-dm items-center justify-center leading-[1]"
           style={{
-            transform: "rotate(-0.092deg)",
-            overflow: "hidden",
-            textAlign: "right",
-            textOverflow: "ellipsis",
+            textAlign: "center",
             fontSize: "14px",
-            fontStyle: "normal",
             fontWeight: 400,
-            lineHeight: "normal",
             color: "#A89700",
-            display: "-webkit-box",
-            WebkitBoxOrient: "vertical",
-            WebkitLineClamp: 1,
+            display: "flex",
           }}
         >
           {code}
         </span>
         <button
-          className="flex w-[40px] h-[40px] justify-center items-center gap-[0px] flex-shrink-0 
-  rounded-full border border-[rgba(47,88,82,0.19)] bg-white shadow-[0px_5px_10px_0px_rgba(21,86,98,0.10)] 
-  text-gray-500 hover:text-gray-700"
+          className="flex w-[40px] h-[40px] justify-center items-center flex-shrink-0
+    rounded-full border border-[rgba(47,88,82,0.19)] bg-white shadow-[0px_5px_10px_0px_rgba(21,86,98,0.10)] 
+    text-gray-500 hover:text-gray-700"
         >
           •••
         </button>
@@ -78,7 +70,7 @@ const ClassCard: React.FC<ClassCardProps> = ({
 };
 
 const AllClasses: React.FC = () => {
-  const scrollRef = useRef<HTMLElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
     if (scrollRef.current) {
@@ -97,52 +89,28 @@ const AllClasses: React.FC = () => {
       className="relative max-w-full"
       style={{ fontFamily: "Cormorant Garamond, serif" }}
     >
-      <div className="py-2 mb-2 flex justify-between px-16  md:flex">
-        <h2
-          className="text-[35px] font-medium text-[#12353D] ml-[20px] mt-[50px]"
-          style={{  fontStyle: "normal", lineHeight: "normal" }}
-        >
+      <div className="py-2 mb-2 flex justify-between px-16 md:flex mt-[60px]">
+        <h2 className="text-[35px] font-medium text-[#12353D]">
           All of Your Classes
         </h2>
         <div className="flex gap-2">
           <button
             onClick={scrollLeft}
-            className="flex w-[38px] h-[38px] p-[10.605px] justify-center items-center gap-[8.837px] flex-shrink-0 rounded-[88.372px] border border-[#D7DFDE] bg-white shadow-[0px_4.419px_8.837px_rgba(21,86,98,0.10)]"
+            className="flex w-[38px] h-[38px] justify-center items-center rounded-full border border-[#D7DFDE] bg-white shadow-md"
           >
-            <ArrowLeft
-              size={22}
-              className="text-gray-700"
-              style={{
-                color: "#2F5852",
-                fontSize: "13.256px",
-                fontWeight: "900",
-                letterSpacing: "1.326px",
-                textTransform: "uppercase",
-              }}
-            />
+            <ArrowLeft size={22} className="text-[#2F5852]" />
           </button>
-
           <button
             onClick={scrollRight}
-            className="flex w-[38px] h-[38px] p-[10.605px] justify-center items-center gap-[8.837px] flex-shrink-0 rounded-[88.372px] border border-[#D7DFDE] bg-white shadow-[0px_4.419px_8.837px_rgba(21,86,98,0.10)]"
+            className="flex w-[38px] h-[38px] justify-center items-center rounded-full border border-[#D7DFDE] bg-white shadow-md"
           >
-            <ArrowRight
-              size={22}
-              className="text-gray-700"
-              style={{
-                color: "#2F5852",
-                fontSize: "13.256px",
-                fontWeight: "900",
-                letterSpacing: "1.326px",
-                textTransform: "uppercase",
-              }}
-            />
+            <ArrowRight size={22} className="text-[#2F5852]" />
           </button>
         </div>
       </div>
 
       <div
-        ref={scrollRef as React.RefObject<HTMLDivElement>}
+        ref={scrollRef}
         className="flex overflow-x-hidden scroll-smooth px-16"
         style={{ scrollBehavior: "smooth", overflowY: "hidden" }}
       >
@@ -158,20 +126,13 @@ const AllClasses: React.FC = () => {
           { title: "Fifth Grade Language Arts", code: "LA-G5" },
           { title: "Fifth Grade Science", code: "SC-G5" },
         ].map((classData, index, arr) => (
-          <div
-            key={index}
-            className="relative"
-            style={{
-              borderRight:
-                index !== arr.length - 1 ? "rgba(124, 188, 200, 0.50)" : "none",
-            }}
-          >
+          <div key={index} className="relative">
             <ClassCard {...classData} />
           </div>
         ))}
       </div>
 
-      <div className="mt-12 px-8">
+      <div className="xl:mt-[50px]">
         <BookGrid />
       </div>
     </div>

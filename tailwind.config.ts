@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens:{
+        ssm: "360px",
+
+      },
       fontFamily: {
         dm: ["DM Sans", "sans-serif"],
         cormorant: ["Cormorant Garamond", "serif"],

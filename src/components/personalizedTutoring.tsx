@@ -3,7 +3,7 @@ import React from "react";
 const PersonalizedTutoring: React.FC = () => {
   return (
     <div
-      style={{ paddingLeft: "70px", marginTop:"60px" }}
+      style={{ paddingLeft: "40px", marginTop:"" }}
       className="bg-[#F5FBFC] p-6 rounded-lg font-cormorant"
     >
       <h2
@@ -15,7 +15,7 @@ const PersonalizedTutoring: React.FC = () => {
           fontWeight: 500,
           lineHeight: "normal",
         }}
-        className=""
+        className="font-semibold"
       >
         Personalized Tutoring
       </h2>

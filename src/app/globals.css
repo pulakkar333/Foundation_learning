@@ -30,3 +30,8 @@ body {
   font-family: "DM Sans";
   src: url("/fonts/DMSans-Regular.ttf") format("opentype");
 }
+.shadow-custom {
+  border-radius: 4.586px;
+  background: radial-gradient(107.53% 62.91% at -0.26% -0.33%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #76B041;
+  box-shadow: 7.2px 7.2px 2.88px 0px rgba(0, 0, 0, 0.10);
+}
