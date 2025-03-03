@@ -125,8 +125,7 @@ export default function Footer() {
             (800) 511-6948
           </p>
           <p className="text-[rgba(47,88,82,0.60)] text-[12px] font-dm-sans ml-[20px]">
-            By calling or texting (800) 511-6948, customers agree to receive
-            text messages. Reply &quot;STOP&quot; to opt out.
+            By calling or texting (800) 511-6948, customers agree to receive text messages. If you no longer wish to receive text messages, you may opt-out at any time by replying &quot;STOP&quot;
           </p>
         </div>
 
