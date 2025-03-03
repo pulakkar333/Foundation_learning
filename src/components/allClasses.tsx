@@ -125,7 +125,7 @@ const AllClasses: React.FC = () => {
           { title: "Fifth Grade Math", code: "MA-G5" },
           { title: "Fifth Grade Language Arts", code: "LA-G5" },
           { title: "Fifth Grade Science", code: "SC-G5" },
-        ].map((classData, index, arr) => (
+        ].map((classData, index) => (
           <div key={index} className="relative">
             <ClassCard {...classData} />
           </div>
