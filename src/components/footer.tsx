@@ -90,7 +90,7 @@ export default function Footer() {
         </div>
 
         {/* Call Section */}
-        <div className="xl:flex xl:items-center xl:justify-end space-x-4 border-r xl:pr-[20px]">
+        <div className="xl:flex xl:items-start xl:justify-end xl:space-x-4 border-r xl:pr-[20px]">
           <Image
             src="/logo/phone.png"
             alt="Foundation Learning"
