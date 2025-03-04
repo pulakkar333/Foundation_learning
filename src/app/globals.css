@@ -22,6 +22,7 @@ body {
     'Cormorant Garamond', sans-serif;
 }
 
+
 @font-face {
   font-family: "Cormorant Garamond";
   src: url("/fonts/CormorantGaramond-Regular.ttf") format("opentype");
@@ -32,26 +33,164 @@ body {
   src: url("/fonts/DMSans-Regular.ttf") format("opentype");
 }
 
-.shadow-custom {
-  border-radius: 4.586px;
-  background: radial-gradient(107.53% 62.91% at -0.26% -0.33%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #76B041;
-  box-shadow: 7.2px 7.2px 2.88px 0px rgba(0, 0, 0, 0.10);
+
+
+
+
+
+
+
+
+/*-------------- HeroSection.css */
+.hero-container {
+  background-color: #dff2f5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
 }
+
+.hero-header {
+  margin-top: 62px;
+}
+
+.hero-title {
+  font-size: 50px;
+  font-weight: 400;
+  color: #12353d;
+  font-family: "Cormorant", serif;
+  line-height: normal;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 50px;
+  }
+}
+
+.hero-title em {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.classes-section,
+.overview-section {
+  width: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .classes-section {
+    width: 33%;
+    border-left: 1px solid #ccc;
+    padding-left: 1.5rem;
+    margin-top: 0;
+  }
+
+  .overview-section {
+    width: 33%;
+    border-left: 1px solid #ccc;
+    padding-left: 1.5rem;
+    border-top: none;
+  }
+}
+
+.classes-header {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+}
+
+.classes-btn,
+.overview-btn {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: #2f5852;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.add-class-btn {
+  font-size: 14px;
+  color: #49887f;
+  border-radius: 8px;
+}
+
+.classes-list {
+  margin-top: 0.75rem;
+  font-size: 14px;
+  color: #2f5852;
+  font-weight: 600;
+}
+
+.classes-list li {
+  cursor: pointer;
+}
+
+.overview-list {
+  margin-top: 1rem;
+  font-size: 16px;
+  color: #2f5852;
+  font-weight: 500;
+}
+
+.overview-list li {
+  display: flex;
+  align-items: center;
+}
+
+.overview-list li i {
+  color: #2f5852;
+  opacity: 0.4;
+  margin-right: 0.5rem;
+  font-size: 9px;
+}
+
+@media (max-width: 768px) {
+  .overview-section {
+    margin-right: 300px;
+    margin-left: 25px;
+  }
+}
+
+.separator {
+  margin-top: 1.5rem;
+  border-top: 1px solid #ccc;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .separator {
+    display: block;
+  }
+}
+
+/*--------------End HeroSection.css */
+
+
+/*-------------- AllClasses.css */
 .all-classes-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 64px; /* Equivalent to px-16 */
+  padding: 8px 64px;
   margin-top: 60px;
 }
-.all-classes-main-title{
+
+.all-classes-main-title {
   font-size: 35px;
   font-weight: 500;
   color: #12353D;
 }
+
 .all-classes-nav-buttons {
   display: flex;
-  gap: 8px; /* Equivalent to gap-2 */
+  gap: 8px;
 }
 
 .all-classes-nav-button {
@@ -60,7 +199,7 @@ body {
   height: 38px;
   justify-content: center;
   align-items: center;
-  border-radius: 9999px;
+  border-radius: 50px;
   border: 1px solid #D7DFDE;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -140,6 +279,80 @@ body {
 }
 
 .all-classes-button:hover {
-  color: #000000; 
+  color: #000000;
 }
 
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* -------------- End AllClasses.css */
+
+/* -------------- BookGrid.css */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 0px 80px 0px 60px;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: auto;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.book-card:hover .book-title {
+  text-decoration: underline;
+}
+
+.book-image-wrapper {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.book-image {
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.book-card:hover .book-image {
+  transform: scale(1.05);
+}
+
+.book-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-info {
+  margin-top: 10px;
+}
+
+.book-code {
+  font-size: 14px;
+  color: #2f585299;
+  font-family: "DM Sans", sans-serif;
+}
+
+.book-title {
+  font-size: 18px;
+  color: #12353d;
+  max-width: 200px;
+  height: 45px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* -------------- End BookGrid.css */

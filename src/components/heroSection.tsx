@@ -61,54 +61,45 @@ const classes = [
 
 export default function HeroSection() {
   return (
-    <div className="bg-[#dff2f5] w-full flex flex-col px-4 md:px-10 lg:px-[80px]">
-      <div className="mt-[62px]">
+    <div className="hero-container xl:px-[80px]">
+      <div className="hero-header">
         <div className="flex flex-col md:flex-row justify-between border-l border-gray-300 px-4 lg:border-hidden md:border-hidden sm:border-b sm:border-gray-300 sm:border-l-0 sm:pl-0 sm:pb-0">
-          <h1 className="text-[32px] md:text-[50px] font-medium text-[#12353D] font-cormorant leading-normal w-auto">
-            Hello <em className="italic font-normal">Emma</em>, Welcome Back!
+          <h1 className="hero-title">
+            Hello <em>Emma</em>,<br /> Welcome Back!
           </h1>
 
           {/* Classes section */}
-          <div className="w-auto md:w-1/3 md:border-l md:pl-6 mt-2 md:mt-0 py-4 order-2 md:order-1 border-gray-300">
-            <div className="border-b border-gray-300 pb-2 flex space-x-[90px] w-full lg:w-[300px] ml-0 xl:border-b">
-              <button className="px-3 py-2 bg-white text-[#2F5852] rounded-full text-sm font-medium">
-                Classes
-              </button>
-              <button className="text-sm text-[#49887F] rounded-lg">
-                + Add Class
-              </button>
+          <div className="classes-section order-2 md:order-1">
+            <div className="classes-header">
+              <button className="classes-btn">Classes</button>
+              <button className="add-class-btn">+ Add Class</button>
             </div>
 
-            <ul className="mt-3 text-sm text-[#2F5852] font-semibold">
+            <ul className="classes-list">
               {classes.map((classItem, index) => (
-                <li key={index} className="cursor-pointer">
-                  {classItem.title} →
-                </li>
+                <li key={index}>{classItem.title} →</li>
               ))}
             </ul>
           </div>
 
           {/* Overview section */}
-          <div className="w-full md:w-1/3 lg:border-l border-gray-300 md:pl-6 border-t lg:border-t-0 lg:border-b-0 py-4 border-b order-1 md:order-2 mr-[300px] ml-[25px]">
-            <button className="px-3 py-2 bg-white text-[#2F5852] rounded-full text-sm font-normal">
-              Overview
-            </button>
-            <ul className="mt-4 space-y-2 text-[#2F5852] text-[16px] font-medium">
-              <li className="flex items-center">
-                <i className="fa-solid fa-circle-check text-[#2F5852] opacity-40 mr-2 text-[9px]"></i>
-                1:1 Tutoring Class
+          <div className="overview-section order-1 md:order-2">
+            <button className="overview-btn">Overview</button>
+            <ul className="overview-list">
+              <li>
+                <i className="fa-solid fa-circle-check"></i> 1:1 Tutoring Class
               </li>
-              <li className="flex items-center">
-                <i className="fa-solid fa-circle-check text-[#2F5852] opacity-40 mr-2 mb-6 text-[9px]"></i>
-                35% Overall Progress on your classes
+              <li>
+                <i className="fa-solid fa-circle-check"></i> 35% Overall
+                Progress on your classes
               </li>
             </ul>
           </div>
         </div>
 
-        <hr className="mt-6 border-t border-gray-300 hidden sm:block lg:border-t" />
+        <hr className="separator" />
       </div>
-      <div className="">
+      <div>
         <Slider
           title="Recent Classes"
           data={classes}
@@ -118,3 +109,10 @@ export default function HeroSection() {
     </div>
   );
 }
+
+
+
+
+
+
+

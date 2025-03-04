@@ -85,7 +85,7 @@ export default function Footer() {
             Terms and Conditions &bull; Privacy Policy
           </p>
           <p className="mt-2 text-[rgba(47,88,82,0.60)] text-[16px] font-dm-sans">
-            &copy; Foundation Learning
+            &copy;Copyright {new Date().getFullYear()} Foundation Learning
           </p>
         </div>
 
@@ -125,7 +125,9 @@ export default function Footer() {
             (800) 511-6948
           </p>
           <p className="text-[rgba(47,88,82,0.60)] text-[12px] font-dm-sans ml-[20px]">
-            By calling or texting (800) 511-6948, customers agree to receive text messages. If you no longer wish to receive text messages, you may opt-out at any time by replying &quot;STOP&quot;
+            By calling or texting (800) 511-6948, customers agree to receive
+            text messages. If you no longer wish to receive text messages, you
+            may opt-out at any time by replying &quot;STOP&quot;
           </p>
         </div>
 

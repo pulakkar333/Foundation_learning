@@ -96,31 +96,30 @@ const books = [
 
 const BookGrid = () => {
   return (
-    <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 xl:gap-x-[50px] xl:gap-y-[40px] xl:pl-[60px] xl:pr-[80px]">
+    <div className="book-grid grid-cols-3 ssm:grid-cols-3 md:grid-cols-5 xl:grid-cols-6 xl:gap-x-[50px] xl:gap-y-[40px] xl:pl-[60px] xl:pr-[80px]">
       {books.map((book, index) => (
-        <div 
-          key={index} 
-          className="flex flex-col items-start w-full h-auto relative transition-all duration-300 p-2 rounded-lg hover:cursor-pointer"
-        >
-          <div className="relative hover:shadow-custom">
+        <div key={index} className="book-card">
+          <div className="book-image-wrapper">
             <Image
               width={142}
               height={190}
               src={book.image}
               alt="Book Logo"
-              className="object-contain self-start transition-all duration-300 ease-in-out"
+              className="book-image"
             />
-            <div className="absolute inset-0 flex items-center justify-center mr-[5px] mb-[10px]">
-              <Image width={91} height={72} src={book.svgIcon} alt="SVG Icon" />
+            <div className="book-overlay">
+              <Image
+                width={91}
+                height={72}
+                src={book.svgIcon}
+                alt="SVG Icon"
+                className="ssm:w-[61px] ssm:h-[48px] md:w-[77px] md:h-[61px]"
+              />
             </div>
           </div>
-          <div className="mt-2">
-            <p className="text-[12px] md:text-[14px] font-dm text-[#2F585299]">
-              {book.code}
-            </p>
-            <p className="text-[14px] md:text-[18px] font-cormorant mt-2 max-w-[200px] h-[45px] text-[#12353D] transition-all duration-300 hover:underline">
-              {book.title}
-            </p>
+          <div className="book-info">
+            <p className="book-code">{book.code}</p>
+            <p className="book-title">{book.title}</p>
           </div>
         </div>
       ))}
