@@ -33,14 +33,6 @@ body {
   src: url("/fonts/DMSans-Regular.ttf") format("opentype");
 }
 
-
-
-
-
-
-
-
-
 /*-------------- HeroSection.css */
 .hero-container {
   background-color: #dff2f5;
@@ -62,12 +54,6 @@ body {
   line-height: normal;
 }
 
-@media (min-width: 768px) {
-  .hero-title {
-    font-size: 50px;
-  }
-}
-
 .hero-title em {
   font-style: italic;
   font-weight: normal;
@@ -80,9 +66,9 @@ body {
   padding-bottom: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1440px) {
   .classes-section {
-    width: 33%;
+    width: 20%;
     border-left: 1px solid #ccc;
     padding-left: 1.5rem;
     margin-top: 0;
@@ -100,9 +86,9 @@ body {
   border-bottom: 1px solid #ccc;
   padding-bottom: 0.5rem;
   display: flex;
-  justify-content: space-between;
+  gap:60px;
   width: 100%;
-  max-width: 300px;
+  
 }
 
 .classes-btn,

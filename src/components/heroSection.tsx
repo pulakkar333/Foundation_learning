@@ -63,12 +63,11 @@ export default function HeroSection() {
   return (
     <div className="hero-container xl:px-[80px]">
       <div className="hero-header">
-        <div className="flex flex-col md:flex-row justify-between border-l border-gray-300 px-4 lg:border-hidden md:border-hidden sm:border-b sm:border-gray-300 sm:border-l-0 sm:pl-0 sm:pb-0">
+        <div className="flex flex-col md:flex-row gap-[20px] border-l border-gray-300 px-4 lg:border-hidden md:border-hidden sm:border-b sm:border-gray-300 sm:border-l-0 sm:pl-0 sm:pb-0">
           <h1 className="hero-title">
             Hello <em>Emma</em>,<br /> Welcome Back!
           </h1>
 
-          {/* Classes section */}
           <div className="classes-section order-2 md:order-1">
             <div className="classes-header">
               <button className="classes-btn">Classes</button>
@@ -82,7 +81,6 @@ export default function HeroSection() {
             </ul>
           </div>
 
-          {/* Overview section */}
           <div className="overview-section order-1 md:order-2">
             <button className="overview-btn">Overview</button>
             <ul className="overview-list">
@@ -109,10 +107,3 @@ export default function HeroSection() {
     </div>
   );
 }
-
-
-
-
-
-
-
