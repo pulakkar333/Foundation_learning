@@ -113,13 +113,13 @@ const BookGrid = () => {
                 height={72}
                 src={book.svgIcon}
                 alt="SVG Icon"
-                className="ssm:w-[61px] ssm:h-[48px] md:w-[77px] md:h-[61px]"
+                className="ssm:w-[61px] ssm:h-[48px] md:w-[77px] md:h-[61px] xl:font-[72px]"
               />
             </div>
           </div>
           <div className="book-info">
-            <p className="book-code">{book.code}</p>
-            <p className="book-title">{book.title}</p>
+            <p className="book-code ">{book.code}</p>
+            <p className="book-title mt-[5px]">{book.title}</p>
           </div>
         </div>
       ))}

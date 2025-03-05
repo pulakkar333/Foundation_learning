@@ -34,129 +34,6 @@ body {
 }
 
 /*-------------- HeroSection.css */
-.hero-container {
-  background-color: #dff2f5;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 0 1rem;
-}
-
-.hero-header {
-  margin-top: 62px;
-}
-
-.hero-title {
-  font-size: 50px;
-  font-weight: 400;
-  color: #12353d;
-  font-family: "Cormorant", serif;
-  line-height: normal;
-}
-
-.hero-title em {
-  font-style: italic;
-  font-weight: normal;
-}
-
-.classes-section,
-.overview-section {
-  width: auto;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-@media (max-width: 1440px) {
-  .classes-section {
-    width: 20%;
-    border-left: 1px solid #ccc;
-    padding-left: 1.5rem;
-    margin-top: 0;
-  }
-
-  .overview-section {
-    width: 33%;
-    border-left: 1px solid #ccc;
-    padding-left: 1.5rem;
-    border-top: none;
-  }
-}
-
-.classes-header {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 0.5rem;
-  display: flex;
-  gap:60px;
-  width: 100%;
-  
-}
-
-.classes-btn,
-.overview-btn {
-  padding: 0.5rem 1rem;
-  background-color: white;
-  color: #2f5852;
-  border-radius: 9999px;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.add-class-btn {
-  font-size: 14px;
-  color: #49887f;
-  border-radius: 8px;
-}
-
-.classes-list {
-  margin-top: 0.75rem;
-  font-size: 14px;
-  color: #2f5852;
-  font-weight: 600;
-}
-
-.classes-list li {
-  cursor: pointer;
-}
-
-.overview-list {
-  margin-top: 1rem;
-  font-size: 16px;
-  color: #2f5852;
-  font-weight: 500;
-}
-
-.overview-list li {
-  display: flex;
-  align-items: center;
-}
-
-.overview-list li i {
-  color: #2f5852;
-  opacity: 0.4;
-  margin-right: 0.5rem;
-  font-size: 9px;
-}
-
-@media (max-width: 768px) {
-  .overview-section {
-    margin-right: 300px;
-    margin-left: 25px;
-  }
-}
-
-.separator {
-  margin-top: 1.5rem;
-  border-top: 1px solid #ccc;
-  display: none;
-}
-
-@media (min-width: 1024px) {
-  .separator {
-    display: block;
-  }
-}
-
-/*--------------End HeroSection.css */
 
 
 /*-------------- AllClasses.css */
@@ -209,11 +86,31 @@ body {
   flex-shrink: 0;
   font-family: "Cormorant Garamond", serif;
   overflow: hidden;
+  background-color: white;
+  position: relative;
 }
 
 .all-classes-container:hover {
   background-color: #ebf7f9;
 }
+
+.all-classes-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  /* Simulating stroke-width */
+  background-color: #73A9AF;
+  /* Stroke color */
+  transition: width 0.3s ease-in-out;
+}
+
+.all-classes-container:hover::after {
+  width: 100%;
+}
+
 
 .all-classes-title {
   width: 250px;
@@ -293,7 +190,7 @@ body {
   width: auto;
   padding: 10px;
   border-radius: 8px;
-  transition: all 0.3s ease-in-out;
+  /* transition: all 0.3s ease-in-out; */
   cursor: pointer;
 }
 
@@ -303,16 +200,16 @@ body {
 
 .book-image-wrapper {
   position: relative;
-  transition: all 0.3s ease-in-out;
+  /* transition: all 0.3s ease-in-out; */
 }
 
 .book-image {
   object-fit: contain;
-  transition: transform 0.3s ease-in-out;
+  /* transition: transform 0.3s ease-in-out; */
 }
 
 .book-card:hover .book-image {
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
 }
 
 .book-overlay {
@@ -331,14 +228,23 @@ body {
   font-size: 14px;
   color: #2f585299;
   font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .book-title {
   font-size: 18px;
   color: #12353d;
-  max-width: 200px;
+  width: 180px;
   height: 45px;
   transition: all 0.3s ease-in-out;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.54px;
+  text-overflow: ellipsis;
+  margin-top:5px;
 }
 
 /* -------------- End BookGrid.css */

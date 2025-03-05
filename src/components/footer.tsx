@@ -2,22 +2,22 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#F5FBFC] text-gray-800 xl:px-[68px] xl:py-[44px]">
-      <div className="container mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-4 text-[12px]">
+    <footer className="bg-[#F5FBFC] text-gray-800 xl:px-[68px] xl:py-[44px] xl:w-auto xl:h-[505px]">
+      <div className="container grid md:grid-cols-2 lg:grid-cols-4 text-[12px]">
         {/* Subjects Section */}
-        <div className="border-r md:border-r pr-4">
-          <h3 className="font-bold text-left uppercase text-[14px] font-dm text-[rgba(47,88,82,0.60)] mb-[7px]">
+        <div className="border-r md:border-r xl:border-r">
+          <h3 className="font-normal text-left uppercase text-[14px] font-dm text-[rgba(47,88,82,0.60)] mb-[7px]">
             SUBJECTS
           </h3>
-          <div className="grid grid-cols-2 gap-6">
-            <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal">
+          <div className="grid grid-cols-2 gap-10">
+            <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal xl:w-[200px] xl:h-[145px]">
               <li>Math</li>
               <li>Science</li>
               <li>English Language</li>
               <li>Homeschool Support</li>
               <li>Study Skills</li>
             </ul>
-            <ul className="text-[#2F5852] text-[16px] font-dm leading-normal">
+            <ul className="text-[#2F5852] text-[16px] font-dm leading-normal xl:w-[200px] xl:h-[145px]">
               <li>Algebra</li>
               <li>Geometry</li>
               <li>Precalculus</li>
@@ -28,8 +28,8 @@ export default function Footer() {
         </div>
 
         {/* Test Prep Section */}
-        <div className="border-r md:border-r-0 px-4">
-          <h3 className="font-bold text-left uppercase text-[14px] font-dm-sans text-[rgba(47,88,82,0.60)] mb-[7px]">
+        <div className="xl:border-r border-r md:border-r-0 xl:px-[44px]">
+          <h3 className="font-normal text-left uppercase text-[14px] font-dm-sans text-[rgba(47,88,82,0.60)] mb-[7px]">
             TEST PREP
           </h3>
           <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal">
@@ -43,8 +43,8 @@ export default function Footer() {
         </div>
 
         {/* College Readiness Section */}
-        <div className="border-l px-4">
-          <h3 className="font-bold text-left uppercase text-[14px] font-dm-sans text-[rgba(47,88,82,0.60)] mb-[7px]">
+        <div className="border-l xl:px-[44px]">
+          <h3 className="font-normal text-left uppercase text-[14px] font-dm-sans text-[rgba(47,88,82,0.60)] mb-[7px]">
             COLLEGE READINESS
           </h3>
           <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal">
@@ -54,8 +54,8 @@ export default function Footer() {
         </div>
 
         {/* About Us Section */}
-        <div className="border-l px-4">
-          <h3 className="font-bold text-left uppercase text-[14px] font-dm-sans text-[rgba(47,88,82,0.60)] mb-[7px]">
+        <div className="border-l xl:px-[44px]">
+          <h3 className="font-normal text-left uppercase text-[14px] font-dm-sans text-[rgba(47,88,82,0.60)] mb-[7px]">
             ABOUT US
           </h3>
           <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal">
@@ -81,10 +81,10 @@ export default function Footer() {
             width={276.818}
             height={35}
           />
-          <p className="mt-2 text-[#2F5852] text-[16px] font-dm-sans">
-            Terms and Conditions &bull; Privacy Policy
+          <p className="mt-[10px] text-[#2F5852] text-[16px] font-dm-sans">
+            Terms and Conditions   &bull;  Privacy Policy
           </p>
-          <p className="mt-2 text-[rgba(47,88,82,0.60)] text-[16px] font-dm-sans">
+          <p className="mt-[10px] text-[rgba(47,88,82,0.60)] text-[16px] font-dm-sans">
             &copy;Copyright {new Date().getFullYear()} Foundation Learning
           </p>
         </div>

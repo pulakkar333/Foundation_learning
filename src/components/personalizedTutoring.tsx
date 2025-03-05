@@ -3,7 +3,10 @@ import React from "react";
 const PersonalizedTutoring: React.FC = () => {
   return (
     <div
-      style={{ paddingLeft: "40px"}}
+      style={{ paddingLeft: "40px",
+        width: "100%",
+        height: "198px",
+      }}
       className="bg-[#F5FBFC] p-6 rounded-lg font-cormorant"
     >
       <h2

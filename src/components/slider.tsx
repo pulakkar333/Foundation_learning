@@ -27,7 +27,7 @@ export default function Slider({ title, data, className }: SliderProps) {
     setCurrentIndex((prev) => (prev === 0 ? data.length - 1 : prev - 1));
 
   return (
-    <div className="mt-6 w-full pb-0 bg-[#dff2f5]">
+    <div className="mt-[45px] w-full pb-0">
       <div className="flex justify-between items-center md:px-0">
         <h2
           className={`text-lg font-semibold ${className}`}
@@ -170,20 +170,20 @@ export default function Slider({ title, data, className }: SliderProps) {
                       {classItem.code}
                     </span>
 
-                    <h3 className="text-lg font-medium text-gray-800 font-cormorant mt-2">
+                    <h3 className="xl:text-[24px] font-medium text-gray-800 font-cormorant mt-[10px] xl:w-[250px] xl:h-[87px] mb-[20px]">
                       {classItem.topic}
                     </h3>
                   </div>
 
-                  <div className="flex items-center xl:space-x-4 xl:mt-[40px]">
-                    <div className="relative w-12 h-12 mb-[px]">
+                  <div className="flex items-center xl:space-x-4 xl:mt-[0px]">
+                    <div className="relative w-[59px] h-[59px] mb-[px]">
                       <svg className="w-full h-full" viewBox="0 0 36 36">
                         <circle
                           cx="18"
                           cy="18"
                           r="16"
                           fill="none"
-                          stroke="#E0E0E0"
+                          stroke="#49887F33"
                           strokeWidth="4"
                         />
                         <circle
@@ -204,11 +204,11 @@ export default function Slider({ title, data, className }: SliderProps) {
                       </span>
                     </div>
 
-                    <div className="relative mb-[16px]">
-                      <button className="relative flex items-center justify-center w-[135px] h-[40px] flex-shrink-0 rounded-[100px] border border-[#D6EFF2] bg-[#EBF7F9] text-sm font-medium shadow-md">
+                    <div className="relative">
+                      <button className="relative flex items-center justify-center xl:w-[135px] xl:h-[40px] flex-shrink-0 rounded-[100px] border border-[#D6EFF2] bg-[#EBF7F9] text-sm font-medium">
                         <span className="text-[#ED801F]">Continue</span>
-                        <span className="absolute right-0 translate-x-1/3 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md border border-[#D6EFF2]">
-                          <span className="text-[#ED801F] font-bold">▶</span>
+                        <span className="absolute right-0 translate-x-1/3 bg-white rounded-full flex items-center justify-center shadow-md border border-[#D6EFF2] w-[40px] h-[40px] xl:mb-[5px]">
+                        <span className="text-[#ED801F] text-[18px] font-extrabold inline-block">▶</span>
                         </span>
                       </button>
                     </div>

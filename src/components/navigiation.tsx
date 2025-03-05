@@ -35,7 +35,7 @@ export default function Navigation() {
           <input
             type="text"
             placeholder="Search..."
-            className="bg-transparent text-[#2F5852] w-full h-full pl-10 pr-4 outline-none focus:ring-0"
+            className="bg-transparent text-[#2F5852] w-[300px] h-[60px] pl-10 pr-4 outline-none focus:ring-0"
           />
         </div>
         {/* Mobile Search Icon */}

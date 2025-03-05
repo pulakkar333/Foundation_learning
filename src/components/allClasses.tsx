@@ -22,7 +22,7 @@ const ClassCard: React.FC<ClassCardProps> = ({
       }`}
     >
       <h3 className="all-classes-title">{title}</h3>
-      <div className="flex items-center mt-4 w-full gap-[10px]">
+      <div className="flex items-center mt-2 w-full gap-[10px]">
         <span className="all-classes-code">{code}</span>
         <button className="all-classes-button">•••</button>
       </div>
@@ -64,8 +64,7 @@ const AllClasses: React.FC = () => {
 
       <div
         ref={scrollRef}
-        className="flex overflow-x-hidden scroll-smooth px-16"
-        style={{ scrollBehavior: "smooth", overflowY: "hidden" }}
+        className="flex overflow-x-auto scroll-smooth px-16 hide-scrollbar"
       >
         {[
           { title: "Fourth Grade Social Studies", code: "SS-G4", active: true },
