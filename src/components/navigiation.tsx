@@ -43,7 +43,7 @@ export default function Navigation() {
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden lg:flex items-center flex-`shrink-0 h-full space-x-6">
+      <nav className="hidden lg:flex items-center flex-`shrink-0 h-full">
         <NavLinks />
       </nav>
 
@@ -70,30 +70,37 @@ function NavLinks({ mobile = false }: { mobile?: boolean }) {
     <>
       <Link
         href="#"
-        className={`text-[#2F5852] text-[16px] font-normal leading-normal ${
-          mobile ? "block py-2" : ""
-        }`}
+        className={`text-[#2F5852] text-[16px] font-normal leading-normal border-r-[1px] border-[#2F58521A] px-4 ${
+          mobile ? "block py-2" : "h-full"
+        } hover:bg-[#D6EFF2] transition-colors duration-200 flex items-center justify-center border-b-4 border-transparent hover:border-b-[#2F5852]`}
       >
         Personalized Tutoring
       </Link>
+
       <Divider mobile={mobile} />
 
       {/* Dropdown */}
       <div className={`relative group ${mobile ? "block" : "hidden lg:block"}`}>
-        <button className="text-[#2F5852] text-[16px] font-normal flex items-center">
+        <button className="text-[#2F5852] text-[16px] font-normal flex items-center h-full px-4">
           Courses
           <ChevronDown className="ml-2" size={12} />
         </button>
 
         <div
-          className={`absolute hidden group-hover:block bg-white shadow-md rounded-lg p-2 mt-2 w-40 ${
+          className={`absolute hidden group-hover:block bg-white shadow-md rounded-lg p-2 mt-2 w-40  ${
             mobile ? "block static shadow-none mt-0" : ""
           }`}
         >
-          <Link href="#" className="block text-[#2F5852] p-2">
+          <Link
+            href="#"
+            className="block text-[#2F5852] p-2 hover:bg-[#D6EFF2] transition-colors duration-200"
+          >
             Course 1
           </Link>
-          <Link href="#" className="block text-[#2F5852] p-2">
+          <Link
+            href="#"
+            className="block text-[#2F5852] p-2 hover:bg-[#D6EFF2] transition-colors duration-200"
+          >
             Course 2
           </Link>
         </div>
@@ -102,27 +109,31 @@ function NavLinks({ mobile = false }: { mobile?: boolean }) {
 
       <Link
         href="#"
-        className={`text-[#2F5852] text-[16px] font-normal leading-normal ${
-          mobile ? "block py-2" : ""
-        }`}
+        className={`text-[#2F5852] text-[16px] font-normal leading-normal border-r-[1px] border-l-[1px] border-[#2F58521A] px-4 ${
+          mobile ? "block py-2" : "h-full"
+        } hover:bg-[#D6EFF2] transition-colors duration-200 flex items-center justify-center border-b-4 border-transparent hover:border-b-[#2F5852]`}
       >
         Student Corner
       </Link>
+
       <Divider mobile={mobile} />
 
       <Link
         href="#"
-        className={`text-[#2F5852] text-[16px] font-normal leading-normal ${
-          mobile ? "block py-2" : ""
-        }`}
+        className={`text-[#2F5852] text-[16px] font-normal leading-normal border-r-[1px] border-[#2F58521A] px-4 ${
+          mobile ? "block py-2" : "h-full"
+        } hover:bg-[#D6EFF2] transition-colors duration-200 flex items-center justify-center border-b-4 border-transparent hover:border-b-[#2F5852]`}
       >
         AI Activities
       </Link>
+
       <Divider mobile={mobile} />
 
       {/* Avatar */}
-      <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center text-gray-700">
-        AV
+      <div className="relative px-4">
+        <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center text-gray-700">
+          AV
+        </div>
       </div>
     </>
   );
@@ -134,7 +145,7 @@ function Divider({ mobile }: { mobile?: boolean }) {
       className={`${
         mobile
           ? "border-t border-gray-300 my-2"
-          : "h-full border-r border-gray-200"
+          : "h-full border- border-gray-200"
       }`}
     ></div>
   );
