@@ -15,11 +15,11 @@ export default function Page() {
       </Head>
 
       <Navigation />
-      <main className="flex-grow">
+      <main className="flex flex-col flex-wrap h-auto xl:flex-grow">
         <HeroSection />
         <AllClasses />
       </main>
-      <main className="px-4 sm:px-[80px] md:px-[80px] xl:px-[80px] xl:mt-[60px] xl:mb-[60px]">
+      <main className="px-4 mt-[40px] sm:px-[80px] md:px-[80px] xl:px-[80px] xl:mt-[60px] xl:mb-[60px]">
         <PersonalizedTutoring />
       </main>
       <Footer />

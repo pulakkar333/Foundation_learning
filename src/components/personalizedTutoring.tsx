@@ -53,9 +53,8 @@ const PersonalizedTutoring: React.FC = () => {
         </p>
         <div className="xl:mt-[25px]">
           <button
-            className="flex justify-center items-center text-white font-dm"
+            className="flex justify-center w-auto items-center text-white font-dm xl:w-auto"
             style={{
-              width: "377px",
               padding: "10px 103px",
               borderRadius: "8px",
               background: "#2F5852",
