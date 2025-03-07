@@ -2,12 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Search, ChevronDown } from "lucide-react";
+import { Search, ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export default function Navigation() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <header className="bg-white flex items-center justify-between h-[60px] font-dm xl:pl-[40px] xl:pr-[20px]">
+    <header className=" bg-white flex items-center justify-between h-[60px] font-dm xl:pl-[40px] xl:pr-[20px]">
       {/* Left Section */}
       <div className="flex items-center flex-shrink-0 space-x-4 h-full">
         <Image
@@ -41,9 +43,24 @@ export default function Navigation() {
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden lg:flex items-center flex-shrink-0 h-full">
+      <nav className="hidden lg:flex items-center flex-`shrink-0 h-full">
         <NavLinks />
       </nav>
+
+      {/* Mobile Menu Button */}
+      <button
+        className="lg:hidden text-gray-700"
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+      >
+        {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+      </button>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden absolute top-[60px] left-0 w-full bg-white shadow-md flex flex-col space-y-4 py-4 px-6">
+          <NavLinks mobile />
+        </div>
+      )}
     </header>
   );
 }
