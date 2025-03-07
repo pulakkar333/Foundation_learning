@@ -30,33 +30,43 @@ const ClassCard: React.FC<ClassCardProps> = ({
   );
 };
 
-const ClassSelector = ({ classes, selectedClass, setSelectedClass }) => {
+interface Class {
+  title: string;
+  code: string;
+  active?: boolean;
+}
+
+interface ClassSelectorProps {
+  classes: Class[];
+  selectedClass: Class;
+  setSelectedClass: (selected: Class) => void;
+}
+
+const ClassSelector: React.FC<ClassSelectorProps> = ({
+  classes,
+  selectedClass,
+  setSelectedClass,
+}) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const handleClassSelect = (selected) => {
+  const handleClassSelect = (selected: Class) => {
     setSelectedClass(selected);
-    setIsDropdownOpen(false); // Close dropdown after selection
+    setIsDropdownOpen(false);
   };
 
   return (
     <div className="relative w-full mt-4 p-4 bg-white ssm:border-b ssm:border-[#2F58521A] ssm:px-[20px] xl:hidden md:hidden">
       <div className="flex items-start justify-between">
         <div>
-          {/* Badge for class code */}
           <span className="bg-yellow-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">
             {selectedClass?.code}
           </span>
-
-          {/* Class Title */}
           <h2 className="ssm:text-[30px] font-cormorant text-[#12353D] mt-2">
             {selectedClass?.title}
           </h2>
         </div>
-
-        {/* Right-side icons */}
         <div className="flex items-center space-x-2">
           <MoreVertical className="text-gray-500 cursor-pointer" size={20} />
-          {/* Clickable Dropdown Arrow */}
           <ChevronDown
             className="text-gray-500 cursor-pointer"
             size={20}
@@ -64,8 +74,6 @@ const ClassSelector = ({ classes, selectedClass, setSelectedClass }) => {
           />
         </div>
       </div>
-
-      {/* Dropdown List (Visible when isDropdownOpen is true) */}
       {isDropdownOpen && (
         <div className="absolute left-0 mt-2 w-full bg-white shadow-lg rounded-lg z-10 max-h-[200px] overflow-y-auto">
           {classes.map((classData) => (
@@ -86,7 +94,7 @@ const ClassSelector = ({ classes, selectedClass, setSelectedClass }) => {
 
 const AllClasses: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [selectedClass, setSelectedClass] = useState({
+  const [selectedClass, setSelectedClass] = useState<Class>({
     title: "Fourth Grade Social Studies",
     code: "SS-G4",
   });
@@ -101,7 +109,8 @@ const AllClasses: React.FC = () => {
       scrollRef.current.scrollBy({ left: 200, behavior: "smooth" });
     }
   };
-  const classes = [
+
+  const classes: Class[] = [
     { title: "Fourth Grade Social Studies", code: "SS-G4", active: true },
     { title: "Fourth Grade Math", code: "MA-G4" },
     { title: "Fourth Grade Language Arts", code: "LA-G4" },
@@ -119,7 +128,6 @@ const AllClasses: React.FC = () => {
       className="relative w-full xl:px-[50px] md:px-[20px] md:pr-[0px]"
       style={{ fontFamily: "Cormorant Garamond, serif" }}
     >
-      {/* Header for Larger Screens */}
       <div className="all-classes-header ssm:hidden xl:flex md:flex items-center justify-between">
         <h2 className="all-classes-main-title">All of Your Classes</h2>
         <div className="all-classes-nav-buttons gap-[10px]">
@@ -131,15 +139,11 @@ const AllClasses: React.FC = () => {
           </button>
         </div>
       </div>
-
-      {/* Dropdown for Small Screens */}
       <ClassSelector
         classes={classes}
         selectedClass={selectedClass}
         setSelectedClass={setSelectedClass}
       />
-
-      {/* Scrollable List for Larger Screens */}
       <div
         ref={scrollRef}
         className="hidden xl:flex md:flex overflow-x-auto scroll-smooth xl:px-[40px] ssm:px-[10px] hide-scrollbar relative ssm:mt-[20px]"
@@ -150,7 +154,6 @@ const AllClasses: React.FC = () => {
           </div>
         ))}
       </div>
-
       <div className="xl:mt-[50px] md:mt-[50px]">
         <BookGrid />
       </div>
