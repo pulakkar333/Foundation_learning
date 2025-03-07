@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import BookGrid from "../components/bookGrid";
-import { ArrowRight, ArrowLeft } from "lucide-react";
+import { ArrowRight, ArrowLeft, MoreVertical, ChevronDown } from "lucide-react";
 
 interface ClassCardProps {
   title: string;
@@ -30,29 +30,99 @@ const ClassCard: React.FC<ClassCardProps> = ({
   );
 };
 
+const ClassSelector = ({ classes, selectedClass, setSelectedClass }) => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleClassSelect = (selected) => {
+    setSelectedClass(selected);
+    setIsDropdownOpen(false); // Close dropdown after selection
+  };
+
+  return (
+    <div className="relative w-full mt-4 p-4 bg-white ssm:border-b ssm:border-[#2F58521A] ssm:px-[20px] xl:hidden md:hidden">
+      <div className="flex items-start justify-between">
+        <div>
+          {/* Badge for class code */}
+          <span className="bg-yellow-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">
+            {selectedClass?.code}
+          </span>
+
+          {/* Class Title */}
+          <h2 className="ssm:text-[30px] font-cormorant text-[#12353D] mt-2">
+            {selectedClass?.title}
+          </h2>
+        </div>
+
+        {/* Right-side icons */}
+        <div className="flex items-center space-x-2">
+          <MoreVertical className="text-gray-500 cursor-pointer" size={20} />
+          {/* Clickable Dropdown Arrow */}
+          <ChevronDown
+            className="text-gray-500 cursor-pointer"
+            size={20}
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          />
+        </div>
+      </div>
+
+      {/* Dropdown List (Visible when isDropdownOpen is true) */}
+      {isDropdownOpen && (
+        <div className="absolute left-0 mt-2 w-full bg-white shadow-lg rounded-lg z-10 max-h-[200px] overflow-y-auto">
+          {classes.map((classData) => (
+            <div
+              key={classData.code}
+              className="p-3 hover:bg-gray-100 cursor-pointer flex justify-between"
+              onClick={() => handleClassSelect(classData)}
+            >
+              <span className="text-gray-800">{classData.title}</span>
+              <span className="text-gray-500 text-xs">{classData.code}</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 const AllClasses: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [selectedClass, setSelectedClass] = useState({
+    title: "Fourth Grade Social Studies",
+    code: "SS-G4",
+  });
 
   const scrollLeft = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({ left: -200, behavior: "smooth" });
     }
   };
-
   const scrollRight = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({ left: 200, behavior: "smooth" });
     }
   };
+  const classes = [
+    { title: "Fourth Grade Social Studies", code: "SS-G4", active: true },
+    { title: "Fourth Grade Math", code: "MA-G4" },
+    { title: "Fourth Grade Language Arts", code: "LA-G4" },
+    { title: "Fourth Grade Science", code: "SC-G4" },
+    { title: "Fourth Grade History", code: "HI-G4" },
+    { title: "Fourth Grade Geography", code: "GE-G4" },
+    { title: "Fifth Grade Social Studies", code: "SS-G5" },
+    { title: "Fifth Grade Math", code: "MA-G5" },
+    { title: "Fifth Grade Language Arts", code: "LA-G5" },
+    { title: "Fifth Grade Science", code: "SC-G5" },
+  ];
 
   return (
     <div
-      className="relative max-w-full xl:px-[50px]"
+      className="relative w-full xl:px-[50px] md:px-[20px] md:pr-[0px]"
       style={{ fontFamily: "Cormorant Garamond, serif" }}
     >
-      <div className="all-classes-header">
+      {/* Header for Larger Screens */}
+      <div className="all-classes-header ssm:hidden xl:flex md:flex items-center justify-between">
         <h2 className="all-classes-main-title">All of Your Classes</h2>
-        <div className="all-classes-nav-buttons">
+        <div className="all-classes-nav-buttons gap-[10px]">
           <button onClick={scrollLeft} className="all-classes-nav-button">
             <ArrowLeft size={22} />
           </button>
@@ -62,54 +132,26 @@ const AllClasses: React.FC = () => {
         </div>
       </div>
 
+      {/* Dropdown for Small Screens */}
+      <ClassSelector
+        classes={classes}
+        selectedClass={selectedClass}
+        setSelectedClass={setSelectedClass}
+      />
+
+      {/* Scrollable List for Larger Screens */}
       <div
         ref={scrollRef}
-        className="flex overflow-x-auto scroll-smooth px-16 hide-scrollbar relative"
+        className="hidden xl:flex md:flex overflow-x-auto scroll-smooth xl:px-[40px] ssm:px-[10px] hide-scrollbar relative ssm:mt-[20px]"
       >
-        {[
-          { title: "Fourth Grade Social Studies", code: "SS-G4", active: true },
-          { title: "Fourth Grade Math", code: "MA-G4" },
-          { title: "Fourth Grade Language Arts", code: "LA-G4" },
-          { title: "Fourth Grade Science", code: "SC-G4" },
-          { title: "Fourth Grade History", code: "HI-G4" },
-          { title: "Fourth Grade Geography", code: "GE-G4" },
-          { title: "Fifth Grade Social Studies", code: "SS-G5" },
-          { title: "Fifth Grade Math", code: "MA-G5" },
-          { title: "Fifth Grade Language Arts", code: "LA-G5" },
-          { title: "Fifth Grade Science", code: "SC-G5" },
-        ].map((classData, index) => (
+        {classes.map((classData, index) => (
           <div key={index} className="relative">
             <ClassCard {...classData} />
           </div>
         ))}
-
-        {/* Fixed Button on the Right Middle of the Section */}
-        <button className="absolute right-[20px] top-1/2 transform -translate-y-1/2 flex items-center justify-center w-[124px] h-[40px] flex-shrink-0 rounded-[100px] border border-[rgba(255,207,164,0.50)] bg-[#FDF0E4] shadow-[0px_-10px_30px_-10px_rgba(237,128,31,0.70)]">
-          <span className="text-[#ED801F] font-[Cormorant Garamond] text-[18px] font-semibold tracking-[-0.9px]">
-            AI Guru
-          </span>
-          <span
-            className="absolute right-0 translate-x-1/3 rounded-full flex items-center justify-center border border-[rgba(255,207,164,0.50)] w-[40px] h-[40px] shadow-md"
-            style={{
-              background:
-                "radial-gradient(60.92% 60.92% at 20.83% 20.83%, #FFCFA4 0%, #ED801F 100%)",
-              boxShadow: "0px 4px 10px 0px rgba(255, 244, 143, 0.70) inset",
-              filter: "drop-shadow(0px 10px 30px rgba(237, 128, 31, 0.70))",
-            }}
-          >
-            {/* Center Glow Effect */}
-            <span
-              className="absolute w-[20px] h-[20px] rounded-full"
-              style={{
-                background: "#FFF48F",
-                filter: "blur(3.5px)",
-              }}
-            ></span>
-          </span>
-        </button>
       </div>
 
-      <div className="xl:mt-[50px]">
+      <div className="xl:mt-[50px] md:mt-[50px]">
         <BookGrid />
       </div>
     </div>

@@ -19,7 +19,7 @@ export default function Page() {
         <HeroSection />
         <AllClasses />
       </main>
-      <main className="px-4 mt-[40px] sm:px-[80px] md:px-[80px] xl:px-[80px] xl:mt-[60px] xl:mb-[60px]">
+      <main className="px-4 mt-[40px] rounded ssm:px-[10px] md:px-[40px] xl:px-[80px] xl:mt-[60px] md:mb-[60px] xl:mb-[60px]">
         <PersonalizedTutoring />
       </main>
       <Footer />

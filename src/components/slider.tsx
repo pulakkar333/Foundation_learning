@@ -79,7 +79,7 @@ export default function Slider({ title, data, className }: SliderProps) {
         </div>
       </div>
 
-      <div className="relative w-full overflow-hidden mt-[22px]">
+      <div className="relative w-full overflow-hidden xl:mt-[22px]">
         <div
           className="flex transition-transform duration-1000"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -87,11 +87,11 @@ export default function Slider({ title, data, className }: SliderProps) {
           {data.map((classItem, index) => (
             <div
               key={index}
-              className="w-full sm:w-1/1 md:w-1/2 lg:w-1/2 px-[30px] relative"
+              className="w-full sm:w-1/1 md:w-1/1 lg:w-1/2 md:pl-[15px] relative"
             >
               {index !== 0 && (
                 <div
-                  className="h-full w-px absolute left-0 top-0 bottom-0"
+                  className="h-full w-px absolute left-0 top-0 bottom-0 ssm:hidden md:block xl:block"
                   style={{
                     strokeWidth: "1px",
                     stroke: "rgba(47, 88, 82, 0.00)",
@@ -101,7 +101,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                 ></div>
               )}
 
-              <div className="p-4 flex flex-col items-center sm:flex-row pb-0 mb-0">
+              <div className="p-6 flex flex-col items-center pb-0 mb-0 ssm:flex-row">
                 <div className="relative mr-[10px]">
                   {classItem.images.map((imgSrc, idx) => (
                     <Image
@@ -110,7 +110,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                       alt={`Image ${idx + 1} - ${classItem.title}`}
                       width={161}
                       height={256}
-                      className={`absolute ${
+                      className={`absolute ssm:w-[123px] ssm:h-[195px] xl:w-[161px] xl:h-[256px] ${
                         idx === 0
                           ? "relative top-[6px] right-[14px]"
                           : idx === 1
@@ -122,7 +122,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                       }}
                     />
                   ))}
-                  <div className="absolute inset-0 flex flex-col mt-[20px] xl:mt-[30px]">
+                  <div className="absolute inset-0 flex flex-col mt-[20px] xl:mt-[20px] md:mt-[30px] gap-[30px]">
                     <Image
                       src={classItem.svgIcon}
                       alt="Custom SVG"
@@ -148,10 +148,10 @@ export default function Slider({ title, data, className }: SliderProps) {
                   </div>
                 </div>
 
-                <div className="flex flex-col justify-center">
-                  <div className="flex flex-col items-center sm:items-start">
+                <div className="flex flex-col justify-center ssm:ml-[-10px]">
+                  <div className="flex flex-col items-center ssm:items-start sm:items-start">
                     <span
-                      className="flex flex-shrink-0 items-center justify-center w-auto h-[32px] px-[14px] py-[7px] rounded-full bg-[#FFF48F]"
+                      className="flex flex-shrink-0 items-center justify-center w-auto h-[32px] px-[14px] py-[7px] rounded-full bg-[#FFF48F] ssm:self-start"
                       style={{
                         transform: "rotate(-0.092deg)",
                         overflow: "hidden",
@@ -170,13 +170,13 @@ export default function Slider({ title, data, className }: SliderProps) {
                       {classItem.code}
                     </span>
 
-                    <h3 className="xl:text-[24px] font-medium text-gray-800 font-cormorant mt-[10px] xl:w-[250px] xl:h-[87px] mb-[20px]">
+                    <h3 className="xl:text-[24px] md:text-[24px] ssm:text-[20px] font-medium text-gray-800 font-cormorant mt-[10px] xl:w-[250px] xl:h-[87px] md:w-[250px] md:h-[87px] mb-[20px] ssm:self-start">
                       {classItem.topic}
                     </h3>
                   </div>
 
-                  <div className="flex items-center xl:space-x-4 xl:mt-[0px]">
-                    <div className="relative w-[59px] h-[59px] mb-[px]">
+                  <div className="flex items-center xl:space-x-[50px] md:space-x-[50px] ssm:space-x-[5px]">
+                    <div className="relative w-[59px] h-[59px] ssm:w-[40px] ssm:h-[40px]">
                       <svg className="w-full h-full" viewBox="0 0 36 36">
                         <circle
                           cx="18"
@@ -199,16 +199,18 @@ export default function Slider({ title, data, className }: SliderProps) {
                           transform="rotate(-90 18 18)"
                         />
                       </svg>
-                      <span className="absolute inset-0 flex items-center justify-center text-sm font-semibold text-gray-700">
+                      <span className="absolute inset-0 flex items-center justify-center text-sm font-semibold text-gray-700 ssm:text-[12px]">
                         {classItem.progress}%
                       </span>
                     </div>
 
                     <div className="relative">
-                      <button className="relative flex items-center justify-center xl:w-[135px] xl:h-[40px] flex-shrink-0 rounded-[100px] border border-[#D6EFF2] bg-[#EBF7F9] text-sm font-medium">
+                      <button className="relative flex items-center justify-center xl:w-[135px] xl:h-[40px] md:w-[135px] md:h-[40px] ssm:w-[120px] ssm:h-[40px] flex-shrink-0 rounded-[100px] border border-[#D6EFF2] bg-[#EBF7F9] text-sm font-medium">
                         <span className="text-[#ED801F]">Continue</span>
                         <span className="absolute right-0 translate-x-1/3 bg-white rounded-full flex items-center justify-center shadow-md border border-[#D6EFF2] w-[40px] h-[40px] xl:mb-[5px]">
-                        <span className="text-[#ED801F] text-[18px] font-extrabold inline-block">▶</span>
+                          <span className="text-[#ED801F] text-[18px] font-extrabold inline-block">
+                            ▶
+                          </span>
                         </span>
                       </button>
                     </div>

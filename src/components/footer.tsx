@@ -2,16 +2,17 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#F5FBFC] text-gray-800 xl:px-[100px] xl:py-[44px] xl:w-auto">
-      <div className="container grid md:grid-cols-2 lg:grid-cols-4 xl:text-[12px] xl:space-x-[100px]">
+    <footer className="bg-[#F5FBFC] text-gray-800 xl:px-[50px] xl:py-[44px] md:px-[50px] md:py-[25px] xl:w-auto"
+    style={{ display:"flex", flexDirection:"column", alignItems:"center" }} >
+      <div className="container grid md:grid-cols-4 lg:grid-cols-4 xl:text-[12px] xl:space-x-[100px] xl:justify-center">
         {/* Subjects Section */}
         <div className="pr-10">
           <h3 className="font-normal text-left uppercase text-[14px] font-dm text-[rgba(47,88,82,0.60)] mb-[7px]">
             SUBJECTS
           </h3>
-          <div className="flex flex-row items-start xl:gap-x-[100px]">
+          <div className="flex flex-row items-start xl:gap-x-[100px] md:flex-col xl:flex-row md:gap-y-4 xl:w-auto">
             {/* First UL */}
-            <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal xl:w-[220px] xl:h-[145px] space-y-2">
+            <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal xl:w-[220px] xl:h-[145px] space-y-2 md:w-full">
               <li className="whitespace-nowrap">Math</li>
               <li className="whitespace-nowrap">Science</li>
               <li className="whitespace-nowrap">English Language</li>
@@ -20,7 +21,7 @@ export default function Footer() {
             </ul>
 
             {/* Second UL */}
-            <ul className="text-[#2F5852] xl:text-[16px] font-dm leading-normal xl:w-[200px] xl:h-[145px] space-y-2">
+            <ul className="text-[#2F5852] xl:text-[16px] font-dm leading-normal xl:w-[200px] xl:h-[145px] space-y-2 md:w-full">
               <li className="whitespace-nowrap">Algebra</li>
               <li className="whitespace-nowrap">Geometry</li>
               <li className="whitespace-nowrap">Precalculus</li>
@@ -31,11 +32,11 @@ export default function Footer() {
         </div>
 
         {/* Test Prep Section */}
-        <div className="xl:px-[44px] border-l md:border-l xl:border-l">
+        <div className="xl:px-[44px] md:px-[44px] border-l md:border-l xl:border-l">
           <h3 className="font-normal text-left uppercase text-[14px] font-dm-sans text-[rgba(47,88,82,0.60)] mb-[7px]">
             TEST PREP
           </h3>
-          <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal space-y-2">
+          <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal space-y-2 md:w-full md:flex-col">
             <li>SAT</li>
             <li>DSAT</li>
             <li>ACT</li>
@@ -46,22 +47,22 @@ export default function Footer() {
         </div>
 
         {/* College Readiness Section */}
-        <div className="border-l xl:px-[44px]">
-          <h3 className="font-normal text-left uppercase text-[14px] font-dm-sans text-[rgba(47,88,82,0.60)] mb-[7px] whitespace-nowrap">
+        <div className="border-l xl:px-[44px] md:px-[44px]">
+          <h3 className="font-normal text-left uppercase text-[14px] font-dm-sans text-[rgba(47,88,82,0.60)] mb-[7px] xl:whitespace-nowrap">
             COLLEGE READINESS
           </h3>
-          <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal">
+          <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal md:w-full md:flex-col">
             <li>AP</li>
             <li>IB</li>
           </ul>
         </div>
 
         {/* About Us Section */}
-        <div className="border-l xl:px-[44px]">
+        <div className="border-l xl:px-[44px] md:px-[44px]">
           <h3 className="font-normal text-left uppercase text-[14px] font-dm-sans text-[rgba(47,88,82,0.60)] mb-[7px]">
             ABOUT US
           </h3>
-          <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal">
+          <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal md:w-full md:flex-col">
             <li>Our Process</li>
             <li>Our Results</li>
             <li>Reviews</li>
@@ -71,31 +72,31 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="xl:mt-[36px] border-t xl:mb-[50px]"></div>
+      <div className="xl:mt-[36px] md:mt-[25px] border-t xl:mb-[50px] md:mb-[25px]"></div>
 
       {/* Footer Bottom Section */}
-      <div className="container mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        {/* Logo & Copyright Section */}
-        <div className="flex flex-col items-center md:items-start">
+
+      <div className="container mx-auto grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="order-1 md:order-2 xl:order-1 flex xl:flex-col md:flex-row items-center md:items-start md:gap-[100px] xl:gap-0 md:border-r xl:border-0 ">
           <Image
-            className="border-b"
+            className="xl:border-b"
             src="/logo/logo.png"
             alt="Foundation Learning"
             width={276.818}
             height={35}
           />
-          <p className="mt-[10px] text-[#2F5852] text-[16px] font-dm-sans">
-            Terms and Conditions &bull; Privacy Policy
-          </p>
-          <p className="mt-[10px] text-[rgba(47,88,82,0.60)] text-[16px] font-dm-sans">
-            &copy;Copyright {new Date().getFullYear()} Foundation Learning
-          </p>
+          <div className="mt-[10px] flex flex-col md:flex-col ">
+            <p className="text-[#2F5852] text-[16px] font-dm-sans md:whitespace-nowrap">
+              Terms and Conditions &bull; Privacy Policy
+            </p>
+            <p className="mt-[10px] md:mt-0 text-[rgba(47,88,82,0.60)] text-[16px] font-dm-sans md:whitespace-nowrap">
+              &copy;Copyright {new Date().getFullYear()} Foundation Learning
+            </p>
+          </div>
         </div>
 
-        {/* Contact Information Wrapper */}
-        <div className="flex justify-end items-start space-x-12 col-span-3">
-          {/* Call Section */}
-          <div className="flex items-start space-x-4">
+        <div className="order-2 md:order-1 xl:order-2 flex justify-end items-start space-x-12 col-span-3 md:border-b xl:border-b-0 md:py-4 ">
+          <div className="flex items-start xl:space-x-4 md:space-x-4 md:whitespace-nowrap">
             <Image
               src="/logo/phone.png"
               alt="Foundation Learning"
@@ -112,7 +113,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Text/WhatsApp Section */}
           <div className="flex flex-col space-y-2 border-r border-l px-6">
             <div className="flex items-center space-x-2">
               <Image
@@ -135,9 +135,8 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Address Section */}
-          <div className="flex flex-col space-y-2">
-            <div className="flex items-center space-x-2">
+          <div className="flex flex-col space-y-2 md:whitespace-nowrap">
+            <div className="flex items-center xl:space-x-2">
               <Image
                 src="/logo/map.png"
                 alt="Foundation Learning"

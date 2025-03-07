@@ -41,7 +41,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 64px;
+  padding: 8px 40px;
   margin-top: 60px;
 }
 
@@ -53,7 +53,7 @@ body {
 
 .all-classes-nav-buttons {
   display: flex;
-  gap: 8px;
+  gap: px;
 }
 
 .all-classes-nav-button {
@@ -236,8 +236,8 @@ body {
 .book-title {
   font-size: 18px;
   color: #12353d;
-  width: 180px;
-  height: 45px;
+  width: auto;
+  height: auto;
   transition: all 0.3s ease-in-out;
   font-style: normal;
   font-weight: 500;

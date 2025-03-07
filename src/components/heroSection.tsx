@@ -62,21 +62,21 @@ const classes = [
 export default function HeroSection() {
   return (
     <div
-      className="w-full flex flex-col px-4 md:px-10 lg:px-[80px] bg-transparent"
+      className="w-full flex flex-col px-4 md:px-[38px] lg:px-[80px] bg-transparent"
       style={{
         background:
           "radial-gradient(71.27% 71.27% at 50% 0%, rgba(115, 169, 175, 0.50) 0%, rgba(172, 235, 243, 0.00) 100%), #D6EFF2",
       }}
     >
       <div className="mt-[60px]">
-        <div className="flex flex-col md:flex-row justify-between border-l border-[#2F58521A] lg:border-hidden md:border-hidden ssm:border-b sm:border-[#2F58521A] sm:border-l-0 sm:pl-0 sm:pb-0">
-          <h1 className="xl:text-[50px] ssm:text-[40px] text-[#12353D] font-cormorant xl:font-[500] xl:w-[343px] xl:h-[122px] leading-normal">
+        <div className="flex flex-col md:flex-row xl:justify-between border-l border-[#2F58521A] lg:border-hidden md:border-hidden sm:border-[#2F58521A] sm:border-l-0 sm:pl-0 sm:pb-0">
+          <h1 className="xl:text-[50px] md:text-[50px] ssm:text-[40px] text-[#12353D] font-cormorant xl:font-[500] xl:w-[343px] xl:h-[122px] md:w-[343px] md:h-[122px] leading-normal ssm:px-[16px]">
             Hello <em className="italic xl:font-[400]">Emma</em>, Welcome Back!
           </h1>
 
           {/* Classes section */}
-          <div className="w-auto xl:border-l md:border-l lg:border-l md:pl-6 md:mt-0 py-4 order-2 md:order-1 border-[#2F58521A] ssm:border-t ssm:border-b md:border-0 xl:border-0">
-            <div className=" border-[#2F58521A] pb-2 flex space-x-[80px] w-full lg:w-[250px] xl:border-b md:border-b ">
+          <div className="w-auto xl:border-l md:border-l lg:border-l md:pl-[20px] md:pr-[20px] md:mt-0 py-4 order-2 md:order-1 border-[#2F58521A] ssm:border-t ssm:border-b md:border-0 xl:border-0 ssm:px-[16px]">
+            <div className="border-[#2F58521A] pb-2 flex xl:space-x-[80px] md:space-x-[20px] ssm:space-x-[100px] w-full lg:w-[250px] xl:border-b md:border-b ">
               <button className="px-3 py-2 bg-white text-[#2F5852] rounded-full text-sm font-medium">
                 Classes
               </button>
@@ -95,7 +95,7 @@ export default function HeroSection() {
           </div>
 
           {/* Overview section */}
-          <div className="w-full md:w-1/3 md:border-l border-[#2F58521A] md:pl-6  py-4  order-1 md:order-2 mr-[300px] ml-[10px]">
+          <div className="w-full md:w-1/3 md:border-l border-[#2F58521A] md:pl-[20px] py-4 order-3 md:order-2 xl:mr-[300px] xl:ml-[10px] ssm:px-[16px] ssm:order-1 ssm:border-t md:border-t-0">
             <button className="px-3 py-2 bg-white text-[#2F5852] rounded-full text-sm font-normal">
               Overview
             </button>
@@ -114,6 +114,7 @@ export default function HeroSection() {
 
         <hr className="mt-[40px] border-t-[1px] border-[#2F58521A] hidden sm:block lg:border-t" />
       </div>
+
       <div className="">
         <Slider
           title="Recent Classes"

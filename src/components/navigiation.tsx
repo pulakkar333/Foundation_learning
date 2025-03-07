@@ -48,12 +48,12 @@ export default function Navigation() {
       </nav>
 
       {/* Mobile Menu Button */}
-      <button
+      {/* <button
         className="lg:hidden text-gray-700"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
       >
         {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-      </button>
+      </button> */}
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (

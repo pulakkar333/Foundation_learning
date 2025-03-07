@@ -96,10 +96,10 @@ const books = [
 
 const BookGrid = () => {
   return (
-    <div className="book-grid grid-cols-3 px-[16px] ssm:grid-cols-3 md:grid-cols-5 xl:grid-cols-6 xl:gap-x-[50px] xl:gap-y-[40px] xl:pl-[60px] xl:pr-[80px]">
+    <div className="book-grid grid-cols-3 xl:px-[16px] ssm:px-[5px] md:px-[0px] ssm:mt-[10px] ssm:grid-cols-3 md:grid-cols-5 xl:grid-cols-6 xl:gap-x-[50px] md:gap-x-[50px] ssm:gap-x-[10px] xl:gap-y-[40px] md:gap-y-[40px] xl:pl-[60px] md:pr-[50px] xl:pr-[80px]">
       {books.map((book, index) => (
         <div key={index} className="book-card">
-          <div className="book-image-wrapper">
+          <div className="book-image-wrapper md:w-[121px] md:h-[161px]">
             <Image
               width={142}
               height={190}
@@ -117,9 +117,10 @@ const BookGrid = () => {
               />
             </div>
           </div>
+
           <div className="book-info">
             <p className="book-code ">{book.code}</p>
-            <p className="book-title">{book.title}</p>
+            <p className="book-title md:w-auto md:h-auto">{book.title}</p>
           </div>
         </div>
       ))}
