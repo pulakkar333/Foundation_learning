@@ -122,7 +122,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                       }}
                     />
                   ))}
-                  <div className="absolute inset-0 flex flex-col mt-[20px] xl:mt-[20px] md:mt-[30px] gap-[30px]">
+                  <div className="absolute inset-0 flex flex-col mt-[20px] xl:mt-[20px] md:mt-[15px] gap-[30px]">
                     <Image
                       src={classItem.svgIcon}
                       alt="Custom SVG"
@@ -170,7 +170,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                       {classItem.code}
                     </span>
 
-                    <h3 className="xl:text-[24px] md:text-[24px] ssm:text-[20px] font-medium text-gray-800 font-cormorant mt-[10px] xl:w-[250px] xl:h-[87px] md:w-[250px] md:h-[87px] mb-[20px] ssm:self-start">
+                    <h3 className="xl:text-[24px] md:text-[24px] ssm:text-[20px] font-medium text-gray-800 font-cormorant xl:w-[250px] xl:h-[87px] md:w-[250px] md:h-[87px] mb-[10px] ssm:self-start">
                       {classItem.topic}
                     </h3>
                   </div>
