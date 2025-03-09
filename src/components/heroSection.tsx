@@ -68,9 +68,9 @@ export default function HeroSection() {
           "radial-gradient(71.27% 71.27% at 50% 0%, rgba(115, 169, 175, 0.50) 0%, rgba(172, 235, 243, 0.00) 100%), #D6EFF2",
       }}
     >
-      <div className="mt-[60px]">
+      <div className="xl:mt-[100px] md:mt-[150px] ssm:mt-[150px]">
         <div className="flex flex-col md:flex-row xl:justify-between border-l border-[#2F58521A] lg:border-hidden md:border-hidden sm:border-[#2F58521A] sm:border-l-0 sm:pl-0 sm:pb-0">
-          <h1 className="xl:text-[50px] md:text-[50px] ssm:text-[40px] text-[#12353D] font-cormorant xl:font-[500] xl:w-[343px] xl:h-[122px] md:w-[343px] md:h-[122px] leading-normal ssm:px-[16px]">
+          <h1 className="xl:text-[50px] md:text-[50px] ssm:text-[40px] text-[#12353D] font-cormorant xl:font-[500] xl:w-auto xl:h-auto md:w-[343px] md:h-[122px] leading-normal ssm:px-[16px]">
             Hello <em className="italic xl:font-[400]">Emma</em>, Welcome Back!
           </h1>
 
