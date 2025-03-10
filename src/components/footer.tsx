@@ -2,15 +2,17 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#F5FBFC] text-gray-800 xl:px-[50px] xl:py-[44px] md:px-[50px] md:py-[25px] xl:w-auto"
-    style={{ display:"flex", flexDirection:"column", alignItems:"center" }} >
-      <div className="container grid md:grid-cols-4 lg:grid-cols-4 xl:text-[12px] xl:space-x-[100px] xl:justify-center">
+    <footer
+      className="bg-[#F5FBFC] text-gray-800 xl:px-[50px] xl:py-[44px] md:px-[50px] md:py-[25px] xl:w-auto"
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
+      <div className="container md:flex md:flex-row xl:text-[12px] xl:space-x-[100px] xl:justify-center">
         {/* Subjects Section */}
-        <div className="pr-10">
+        <div className="ssm:mt-[40px] ssm:pl-[16px]">
           <h3 className="font-normal text-left uppercase text-[14px] font-dm text-[rgba(47,88,82,0.60)] mb-[7px]">
             SUBJECTS
           </h3>
-          <div className="flex flex-row items-start xl:gap-x-[100px] md:flex-col xl:flex-row md:gap-y-4 xl:w-auto">
+          <div className="flex flex-row items-start xl:gap-x-[100px] md:flex-col xl:flex-row md:gap-y-4 xl:w-auto ssm:gap-x-[40px]">
             {/* First UL */}
             <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal xl:w-[220px] xl:h-[145px] space-y-2 md:w-full">
               <li className="whitespace-nowrap">Math</li>
@@ -32,33 +34,36 @@ export default function Footer() {
         </div>
 
         {/* Test Prep Section */}
-        <div className="xl:px-[44px] md:px-[44px] border-l md:border-l xl:border-l">
-          <h3 className="font-normal text-left uppercase text-[14px] font-dm-sans text-[rgba(47,88,82,0.60)] mb-[7px]">
-            TEST PREP
-          </h3>
-          <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal space-y-2 md:w-full md:flex-col">
-            <li>SAT</li>
-            <li>DSAT</li>
-            <li>ACT</li>
-            <li>SSAT</li>
-            <li>ISEE</li>
-            <li>HSPT</li>
-          </ul>
-        </div>
+        <div className="ssm:flex ssm:flex-row ssm:gap-x-[50px] ssm:mt-[40px] ssm:pl-[16px] md:flex-block">
+          {/* Test Prep Section */}
+          <div className="xl:px-[44px] md:px-[44px] border-l ssm:border-l-0 md:border-l xl:border-l">
+            <h3 className="font-normal text-left uppercase text-[14px] font-dm-sans text-[rgba(47,88,82,0.60)] mb-[7px]">
+              TEST PREP
+            </h3>
+            <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal space-y-2 md:w-full md:flex-col">
+              <li>SAT</li>
+              <li>DSAT</li>
+              <li>ACT</li>
+              <li>SSAT</li>
+              <li>ISEE</li>
+              <li>HSPT</li>
+            </ul>
+          </div>
 
-        {/* College Readiness Section */}
-        <div className="border-l xl:px-[44px] md:px-[44px]">
-          <h3 className="font-normal text-left uppercase text-[14px] font-dm-sans text-[rgba(47,88,82,0.60)] mb-[7px] xl:whitespace-nowrap">
-            COLLEGE READINESS
-          </h3>
-          <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal md:w-full md:flex-col">
-            <li>AP</li>
-            <li>IB</li>
-          </ul>
+          {/* College Readiness Section */}
+          <div className="border-l xl:px-[44px] md:px-[44px] ssm:pl-[20px]">
+            <h3 className="font-normal text-left uppercase text-[14px] font-dm-sans text-[rgba(47,88,82,0.60)] mb-[7px] xl:whitespace-nowrap ">
+              COLLEGE READINESS
+            </h3>
+            <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal md:w-full md:flex-col">
+              <li>AP</li>
+              <li>IB</li>
+            </ul>
+          </div>
         </div>
 
         {/* About Us Section */}
-        <div className="border-l xl:px-[44px] md:px-[44px]">
+        <div className="border-l xl:px-[44px] md:px-[44px] ssm:mt-[40px] ssm:pl-[16px] ssm:border-l-0">
           <h3 className="font-normal text-left uppercase text-[14px] font-dm-sans text-[rgba(47,88,82,0.60)] mb-[7px]">
             ABOUT US
           </h3>
@@ -77,7 +82,7 @@ export default function Footer() {
       {/* Footer Bottom Section */}
 
       <div className="container mx-auto grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-        <div className="order-1 md:order-2 xl:order-1 flex xl:flex-col md:flex-row items-center md:items-start md:gap-[100px] xl:gap-0 md:border-r xl:border-0 ">
+        <div className="order-2 ssm:order-2 md:order-2 xl:order-1 flex ssm:flex-col xl:flex-col md:flex-row items-center md:items-start md:gap-[100px] xl:gap-0 md:border-r xl:border-0">
           <Image
             className="xl:border-b"
             src="/logo/logo.png"
@@ -85,17 +90,17 @@ export default function Footer() {
             width={276.818}
             height={35}
           />
-          <div className="mt-[10px] flex flex-col md:flex-col ">
-            <p className="text-[#2F5852] text-[16px] font-dm-sans md:whitespace-nowrap">
+          <div className="mt-[10px] flex flex-col md:flex-col ssm:flex">
+            <p className="text-[#2F5852] text-[16px] font-dm-sans md:whitespace-nowrap ssm:whitespace-nowrap">
               Terms and Conditions &bull; Privacy Policy
             </p>
-            <p className="mt-[10px] md:mt-0 text-[rgba(47,88,82,0.60)] text-[16px] font-dm-sans md:whitespace-nowrap">
+            <p className="mt-[10px] md:mt-0 text-[rgba(47,88,82,0.60)] text-[16px] font-dm-sans md:whitespace-nowrap ssm:whitespace-nowrap">
               &copy;Copyright {new Date().getFullYear()} Foundation Learning
             </p>
           </div>
         </div>
 
-        <div className="order-2 md:order-1 xl:order-2 flex justify-end items-start space-x-12 col-span-3 md:border-b xl:border-b-0 md:py-4 ">
+        <div className="order-1 ssm:order-1 md:order-1 xl:order-2 flex justify-end space-x-12 col-span-3 md:border-b md:border-t xl:border-b-0 xl:border-t-0 md:py-4 ">
           <div className="flex items-start xl:space-x-4 md:space-x-4 md:whitespace-nowrap">
             <Image
               src="/logo/phone.png"
@@ -136,14 +141,14 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col space-y-2 md:whitespace-nowrap">
-            <div className="flex items-center xl:space-x-2">
+            <div className="flex items-center xl:space-x-2 md:space-x-2">
               <Image
                 src="/logo/map.png"
                 alt="Foundation Learning"
                 width={21}
                 height={18}
               />
-              <h3 className="text-[14px] text-[rgba(47,88,82,0.60)] uppercase font-dm-sans">
+              <h3 className="text-[14px] ssm:text-[10px] text-[rgba(47,88,82,0.60)] uppercase font-dm-sans">
                 ADDRESS
               </h3>
             </div>

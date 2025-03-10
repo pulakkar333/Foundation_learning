@@ -70,7 +70,7 @@ export default function HeroSection() {
     >
       <div className="xl:mt-[100px] md:mt-[150px] ssm:mt-[150px]">
         <div className="flex flex-col md:flex-row xl:justify-between border-l border-[#2F58521A] lg:border-hidden md:border-hidden sm:border-[#2F58521A] sm:border-l-0 sm:pl-0 sm:pb-0">
-          <h1 className="xl:text-[50px] md:text-[50px] ssm:text-[40px] text-[#12353D] font-cormorant xl:font-[500] xl:w-auto xl:h-auto md:w-[343px] md:h-[122px] leading-normal ssm:px-[16px]">
+          <h1 className="xl:text-[50px] md:text-[50px] ssm:text-[40px] text-[#12353D] font-cormorant xl:font-[500] md:font-[500] ssm:font-[500] xl:w-auto xl:h-auto md:w-[343px] md:h-[122px] leading-normal ssm:px-[16px]">
             Hello <em className="italic xl:font-[400]">Emma</em>, Welcome Back!
           </h1>
 
@@ -95,12 +95,12 @@ export default function HeroSection() {
           </div>
 
           {/* Overview section */}
-          <div className="w-full md:w-1/3 md:border-l border-[#2F58521A] md:pl-[20px] py-4 order-3 md:order-2 xl:mr-[300px] xl:ml-[10px] ssm:px-[16px] ssm:order-1 ssm:border-t md:border-t-0">
+          <div className="w-full md:w-1/6 xl:w-1/3 md:border-l border-[#2F58521A] md:pl-[20px] py-4 order-3 md:order-2 xl:mr-[300px] xl:ml-[10px] ssm:px-[16px] ssm:order-1 ssm:border-t md:border-t-0 md:ml-0 md:mr-0">
             <button className="px-3 py-2 bg-white text-[#2F5852] rounded-full text-sm font-normal">
               Overview
             </button>
             <ul className="mt-4 space-y-2 text-[#2F5852] text-[16px] font-medium">
-              <li className="flex items-center">
+              <li className="flex items-center md:whi">
                 <i className="fa-solid fa-circle-check text-[#2F5852] opacity-40 mr-2 text-[9px]"></i>
                 1:1 Tutoring Class
               </li>

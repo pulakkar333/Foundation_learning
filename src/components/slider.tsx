@@ -148,7 +148,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                   </div>
                 </div>
 
-                <div className="flex flex-col justify-center ssm:ml-[-10px]">
+                <div className="flex flex-col justify-center ssm:ml-[10px]">
                   <div className="flex flex-col items-center ssm:items-start sm:items-start">
                     <span
                       className="flex flex-shrink-0 items-center justify-center w-auto h-[32px] px-[14px] py-[7px] rounded-full bg-[#FFF48F] ssm:self-start"
@@ -175,7 +175,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                     </h3>
                   </div>
 
-                  <div className="flex items-center xl:space-x-[50px] md:space-x-[50px] ssm:space-x-[5px]">
+                  <div className="flex items-center xl:space-x-[50px] md:space-x-[50px] ssm:space-x-[5px] xl:mt-[20px]">
                     <div className="relative w-[59px] h-[59px] ssm:w-[40px] ssm:h-[40px]">
                       <svg className="w-full h-full" viewBox="0 0 36 36">
                         <circle
