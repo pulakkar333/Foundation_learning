@@ -64,10 +64,7 @@ function Navigation({ second = false }: { second?: boolean }) {
 
       {!second ? (
         <nav className="hidden xl:pl-[160px] lg:flex items-center flex-shrink-0 h-full">
-          {/* Hide NavLinks on lg screens */}
-          <div className="hidden lg:hidden xl:flex">
-            <NavLinks />
-          </div>
+          <NavLinks />
         </nav>
       ) : (
         <nav className="flex items-center justify-between flex-shrink-0 h-full w-full overflow-x-auto">
