@@ -154,6 +154,7 @@ const AllClasses: React.FC = () => {
           </div>
         ))}
       </div>
+     
       <div className="xl:mt-[50px] md:mt-[50px]">
         <BookGrid />
       </div>

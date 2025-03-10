@@ -43,9 +43,9 @@ export default function Slider({ title, data, className }: SliderProps) {
           {title}
         </h2>
 
-        <div style={{ paddingRight: "25px" }} className="flex gap-2">
+        <div style={{ paddingRight: "" }} className="flex gap-[8px]">
           <button
-            className="w-auto h-[38px] p-2 bg-white rounded-full"
+            className="w-[38px] h-[38px] p-2 bg-white rounded-full"
             onClick={prevSlide}
           >
             <ArrowLeft
