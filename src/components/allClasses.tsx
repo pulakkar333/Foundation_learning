@@ -125,7 +125,7 @@ const AllClasses: React.FC = () => {
 
   return (
     <div
-      className="relative w-full xl:px-[50px] md:px-[20px] md:pr-[0px]"
+      className="relative w-full xl:px-[80px] md:px-[40px] lg:px-[40px] sm:px-[40px]"
       style={{ fontFamily: "Cormorant Garamond, serif" }}
     >
       <div className="all-classes-header ssm:hidden xl:flex md:flex items-center justify-between">
@@ -146,7 +146,7 @@ const AllClasses: React.FC = () => {
       />
       <div
         ref={scrollRef}
-        className="hidden xl:flex md:flex overflow-x-auto scroll-smooth xl:px-[40px] ssm:px-[10px] hide-scrollbar relative ssm:mt-[20px]"
+        className="hidden xl:flex md:flex overflow-x-auto scroll-smooth xl:px-[px] ssm:px-[10px] hide-scrollbar relative ssm:mt-[20px]"
       >
         {classes.map((classData, index) => (
           <div key={index} className="relative">

@@ -41,7 +41,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 40px;
+  padding: 8px 10px;
   margin-top: 60px;
 }
 
@@ -180,7 +180,7 @@ body {
 .book-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  padding: 0px 80px 0px 60px;
+  padding: 0px 0px 0px 0px;
 }
 
 .book-card {

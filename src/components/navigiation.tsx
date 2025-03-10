@@ -24,7 +24,7 @@ function Navigation({ second = false }: { second?: boolean }) {
         second ? "top-[60px]" : "top-0"
       }`}
     >
-      <div className="flex items-center ssm:pl-6 flex-shrink-0 space-x-4 h-full">
+      <div className="flex items-center flex-shrink-0 space-x-4 h-full">
         {!second && (
           <div className="md:hidden">
             <Search className="text-[#2F5852] cursor-pointer" size={24} />
@@ -63,7 +63,7 @@ function Navigation({ second = false }: { second?: boolean }) {
       </div>
 
       {!second ? (
-        <nav className="hidden xl:flex lg:hidden xl:pl-[160px] items-center flex-shrink-0 h-full">
+        <nav className="hidden xl:flex lg:hidden xl:pl-[0px] items-center flex-shrink-0 h-full">
           <NavLinks />
         </nav>
       ) : (
@@ -88,7 +88,7 @@ function NavLinks() {
     <>
       <Link
         href="#"
-        className="text-[#2F5852] text-[16px] font-normal leading-normal border-r-[1px] border-[#2F58521A] px-4 h-full hover:bg-[#D6EFF2] transition-colors duration-200 flex items-center justify-center border-b-4 border-transparent hover:border-b-[#2F5852] ssm:whitespace-nowrap"
+        className="text-[#2F5852] text-[16px] font-normal leading-normal border-r-[1px] border-[#2F58521A] px-4 h-full hover:bg-[#D6EFF2] transition-colors duration-200 flex items-center justify-center border-b-4 border-transparent hover:border-b-[#2F5852] ssm:whitespace-nowrap w-auto"
       >
         Personalized Tutoring
       </Link>

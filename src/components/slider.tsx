@@ -101,8 +101,8 @@ export default function Slider({ title, data, className }: SliderProps) {
                 ></div>
               )}
 
-              <div className="p-6 flex flex-col items-center pb-0 mb-0 ssm:flex-row">
-                <div className="relative mr-[10px]">
+              <div className="p-6 flex flex-col items-center pb-0 mb-[-10px] ssm:flex-row">
+                <div className="relative">
                   {classItem.images.map((imgSrc, idx) => (
                     <Image
                       key={idx}
@@ -110,7 +110,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                       alt={`Image ${idx + 1} - ${classItem.title}`}
                       width={161}
                       height={256}
-                      className={`absolute ssm:w-[123px] ssm:h-[195px] xl:w-[161px] xl:h-[256px] ${
+                      className={`absolute ${
                         idx === 0
                           ? "relative top-[6px] right-[14px]"
                           : idx === 1
@@ -122,7 +122,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                       }}
                     />
                   ))}
-                  <div className="absolute inset-0 flex flex-col mt-[20px] xl:mt-[20px] md:mt-[15px] gap-[30px]">
+                  <div className="absolute inset-0 flex flex-col mt-[20px] xl:mt-[20px] md:mt-[20px] gap-[20px]">
                     <Image
                       src={classItem.svgIcon}
                       alt="Custom SVG"
@@ -148,8 +148,8 @@ export default function Slider({ title, data, className }: SliderProps) {
                   </div>
                 </div>
 
-                <div className="flex flex-col justify-center ssm:ml-[10px]">
-                  <div className="flex flex-col items-center ssm:items-start sm:items-start xl:gap-4">
+                <div className="flex flex-col justify-center">
+                  <div className="flex flex-col items-center ssm:items-start sm:items-start">
                     <span
                       className="flex flex-shrink-0 items-center justify-center w-auto h-[32px] px-[14px] py-[7px] rounded-full bg-[#FFF48F] ssm:self-start"
                       style={{
@@ -170,13 +170,13 @@ export default function Slider({ title, data, className }: SliderProps) {
                       {classItem.code}
                     </span>
 
-                    <h3 className="xl:text-[24px] md:text-[24px] ssm:text-[20px] font-medium text-gray-800 font-cormorant xl:w-[250px] xl:h-[87px] md:w-[250px] md:h-[87px] mb-[10px] ssm:self-start xl:mb-6">
+                    <h3 className="xl:text-[24px] md:text-[24px] ssm:text-[20px] font-medium text-gray-800 font-cormorant xl:w-[250px] xl:h-[87px] md:w-[250px] md:h-[87px] mb-[10px] ssm:self-start ssm:w-[186px] ssm:h-[48px]">
                       {classItem.topic}
                     </h3>
                   </div>
 
-                  <div className="flex items-center xl:space-x-[50px] md:space-x-[50px] ssm:space-x-[5px] xl:mt-[20px]">
-                    <div className="relative xl:w-[59px] xl:h-[59px] ssm:w-[40px] ssm:h-[40px]">
+                  <div className="flex items-center xl:space-x-[50px] md:space-x-[50px] ssm:space-x-[5px] ssm:mt-[20px] xl:mt-0 md:mt-0">
+                    <div className="relative xl:w-[59px] xl:h-[59px] md:w-[59px] md:h-[59px] ssm:w-[35px] ssm:h-[35px]">
                       <svg className="w-full h-full" viewBox="0 0 36 36">
                         <circle
                           cx="18"
@@ -199,16 +199,16 @@ export default function Slider({ title, data, className }: SliderProps) {
                           transform="rotate(-90 18 18)"
                         />
                       </svg>
-                      <span className="absolute inset-0 flex items-center justify-center text-sm font-semibold text-gray-700 ssm:text-[12px] xl:text-[15px]">
+                      <span className="absolute inset-0 flex items-center justify-center text-sm font-semibold text-gray-700 ssm:text-[12px] xl:text-[15px] md:text-[15px]">
                         {classItem.progress}%
                       </span>
                     </div>
 
                     <div className="relative">
-                      <button className="relative flex items-center justify-center xl:w-[135px] xl:h-[40px] md:w-[135px] md:h-[40px] ssm:w-[120px] ssm:h-[40px] flex-shrink-0 rounded-[100px] border border-[#D6EFF2] bg-[#EBF7F9] text-sm font-medium">
-                        <span className="text-[#ED801F]">Continue</span>
-                        <span className="absolute right-0 translate-x-1/3 bg-white rounded-full flex items-center justify-center shadow-md border border-[#D6EFF2] w-[40px] h-[40px] xl:mb-[5px]">
-                          <span className="text-[#ED801F] text-[18px] font-extrabold inline-block">
+                      <button className="relative flex items-center justify-center xl:w-[135px] xl:h-[40px] md:w-[135px] md:h-[40px] ssm:w-[90px] ssm:h-[35px] flex-shrink-0 rounded-[100px] border border-[#D6EFF2] bg-[#EBF7F9] text-sm font-medium">
+                        <span className="text-[#ED801F] ssm:text-[12px] md:text-[15px] xl:text-[15px]  ssm:mr-3">Continue</span>
+                        <span className="absolute right-0 translate-x-1/3 bg-white rounded-full flex items-center justify-center shadow-md border border-[#D6EFF2] w-[40px] h-[40px] xl:mb-[4px] ssm:mb-[4px] md:mb-[4px] ssm:w-[35px] ssm:h-[35px]">
+                          <span className="text-[#ED801F] text-[18px] font-extrabold inline-block mb-[4px]">
                             ▶
                           </span>
                         </span>
