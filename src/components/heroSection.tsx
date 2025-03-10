@@ -95,20 +95,22 @@ export default function HeroSection() {
           </div>
 
           {/* Overview section */}
-          <div className="w-full md:w-1/6 xl:w-1/3 md:border-l border-[#2F58521A] md:pl-[20px] py-4 order-3 md:order-2 xl:mr-[300px] xl:ml-[10px] ssm:px-[16px] ssm:order-1 ssm:border-t md:border-t-0 md:ml-0 md:mr-0">
+          <div className="w-full md:w-1/6 xl:w-1/3 md:border-l border-[#2F58521A] md:pl-[20px] py-4 order-3 md:order-2 xl:mr-[300px] xl:ml-[10px] ssm:px-[16px] ssm:order-1 ssm:border-t md:border-t-0 md:ml-0 md:mr-0 relative md:overflow-hidden xl:overflow-visible">
             <button className="px-3 py-2 bg-white text-[#2F5852] rounded-full text-sm font-normal">
               Overview
             </button>
-            <ul className="mt-4 space-y-2 text-[#2F5852] text-[16px] font-medium">
-              <li className="flex items-center md:whi">
+            <ul className="mt-4 space-y-2 text-[#2F5852] text-[16px] font-medium md:flex md:space-y-0 md:space-x-4 md:overflow-x-auto md:no-scrollbar md:flex-col">
+              <li className="flex items-center md:whitespace-nowrap ssm:pl-4">
                 <i className="fa-solid fa-circle-check text-[#2F5852] opacity-40 mr-2 text-[9px]"></i>
                 1:1 Tutoring Class
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center md:whitespace-nowrap">
                 <i className="fa-solid fa-circle-check text-[#2F5852] opacity-40 mr-2 text-[9px]"></i>
                 35% Overall Progress on your classes
               </li>
             </ul>
+            {/* Gradient overlay for fading effect */}
+            <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[] to-transparent pointer-events-none hidden md:block"></div>
           </div>
         </div>
 
