@@ -149,7 +149,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                 </div>
 
                 <div className="flex flex-col justify-center ssm:ml-[10px]">
-                  <div className="flex flex-col items-center ssm:items-start sm:items-start">
+                  <div className="flex flex-col items-center ssm:items-start sm:items-start xl:gap-4">
                     <span
                       className="flex flex-shrink-0 items-center justify-center w-auto h-[32px] px-[14px] py-[7px] rounded-full bg-[#FFF48F] ssm:self-start"
                       style={{
@@ -170,13 +170,13 @@ export default function Slider({ title, data, className }: SliderProps) {
                       {classItem.code}
                     </span>
 
-                    <h3 className="xl:text-[24px] md:text-[24px] ssm:text-[20px] font-medium text-gray-800 font-cormorant xl:w-[250px] xl:h-[87px] md:w-[250px] md:h-[87px] mb-[10px] ssm:self-start">
+                    <h3 className="xl:text-[24px] md:text-[24px] ssm:text-[20px] font-medium text-gray-800 font-cormorant xl:w-[250px] xl:h-[87px] md:w-[250px] md:h-[87px] mb-[10px] ssm:self-start xl:mb-6">
                       {classItem.topic}
                     </h3>
                   </div>
 
                   <div className="flex items-center xl:space-x-[50px] md:space-x-[50px] ssm:space-x-[5px] xl:mt-[20px]">
-                    <div className="relative w-[59px] h-[59px] ssm:w-[40px] ssm:h-[40px]">
+                    <div className="relative xl:w-[59px] xl:h-[59px] ssm:w-[40px] ssm:h-[40px]">
                       <svg className="w-full h-full" viewBox="0 0 36 36">
                         <circle
                           cx="18"
@@ -199,7 +199,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                           transform="rotate(-90 18 18)"
                         />
                       </svg>
-                      <span className="absolute inset-0 flex items-center justify-center text-sm font-semibold text-gray-700 ssm:text-[12px]">
+                      <span className="absolute inset-0 flex items-center justify-center text-sm font-semibold text-gray-700 ssm:text-[12px] xl:text-[15px]">
                         {classItem.progress}%
                       </span>
                     </div>
