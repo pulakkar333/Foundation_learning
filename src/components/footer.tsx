@@ -80,7 +80,7 @@ export default function Footer() {
       {/* Footer Bottom Section */}
 
       <div className="container mx-auto grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-        <div className="order-2 ssm:order-2 md:order-2 xl:order-1 flex ssm:flex-col xl:flex-col md:flex-row items-center md:items-start md:gap-[100px] xl:gap-0 md:border-r xl:border-0 ssm:ml-10 ssm:border-t md:border-t-0">
+        <div className="order-2 ssm:order-2 md:order-2 xl:order-1 flex ssm:flex-col xl:flex-col md:flex-row items-center md:items-start md:gap-[50px] lg:gap-[100px] xl:gap-0  xl:border-0 ssm:ml-10 ssm:border-t md:border-t-0">
           <Image
             className="xl:border-b ssm:mr-10 mt-[24px]"
             src="/logo/logo.png"
@@ -88,7 +88,7 @@ export default function Footer() {
             width={276.818}
             height={35}
           />
-          <div className="mt-[10px] flex flex-col md:flex-col ssm:flex">
+          <div className="mt-[10px] flex flex-col md:flex-col ssm:flex md:border-l xl:border-l-0">
             <p className="text-[#2F5852] text-[16px] font-dm-sans md:whitespace-nowrap ssm:whitespace-nowrap">
               Terms and Conditions &bull; Privacy Policy
             </p>

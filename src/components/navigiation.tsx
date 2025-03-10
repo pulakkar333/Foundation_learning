@@ -20,7 +20,7 @@ export default function Layout() {
 function Navigation({ second = false }: { second?: boolean }) {
   return (
     <header
-      className={`fixed w-full z-50 bg-white flex items-center justify-between h-[60px] font-dm xl:pl-[px] xl:pr-[0px] shadow-md transition-all duration-300 border-b-[1px] border-[#2F58521A] ${
+      className={`fixed w-full z-50 bg-white flex items-center justify-between h-[60px] font-dm xl:pl-[0px] xl:pr-[0px] transition-all duration-300 border-b-[1px] border-[#2F58521A] ${
         second ? "top-[60px]" : "top-0"
       }`}
     >
@@ -63,7 +63,7 @@ function Navigation({ second = false }: { second?: boolean }) {
       </div>
 
       {!second ? (
-        <nav className="hidden xl:flex lg:hidden xl:pl-[0px] items-center flex-shrink-0 h-full">
+        <nav className="hidden xl:flex lg:hidden xl:pl-[200px] items-center flex-shrink-0 h-full">
           <NavLinks />
         </nav>
       ) : (
@@ -133,6 +133,7 @@ function NavLinks() {
       >
         AI Activities
       </Link>
+      <Divider />
     </>
   );
 }
