@@ -63,7 +63,7 @@ function Navigation({ second = false }: { second?: boolean }) {
       </div>
 
       {!second ? (
-        <nav className="hidden xl:pl-[160px] lg:flex items-center flex-shrink-0 h-full">
+        <nav className="hidden xl:flex lg:hidden xl:pl-[160px] items-center flex-shrink-0 h-full">
           <NavLinks />
         </nav>
       ) : (
