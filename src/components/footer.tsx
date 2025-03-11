@@ -80,7 +80,7 @@ export default function Footer() {
       {/* Footer Bottom Section */}
 
       <div className="container mx-auto grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-        <div className="order-2 ssm:order-2 md:order-2 xl:order-1 flex ssm:flex-col xl:flex-col md:flex-row items-center md:items-start md:gap-[50px] lg:gap-[100px] xl:gap-0  xl:border-0 ssm:ml-10 ssm:border-t md:border-t-0">
+        <div className="order-2 ssm:order-2 md:order-2 xl:order-1 flex ssm:flex-col xl:flex-col md:flex-row items-center md:items-start md:gap-[50px] lg:gap-[100px] xl:gap-0 xl:border-0 ssm:ml-10 ssm:border-t md:border-t-0">
           <Image
             className="xl:border-b ssm:mr-10 mt-[24px]"
             src="/logo/logo.png"
@@ -99,7 +99,7 @@ export default function Footer() {
         </div>
 
         <div className="order-1 ssm:order-1 md:order-1 xl:order-2 flex justify-end space-x-12 col-span-3 md:border-b md:border-t xl:border-b-0 xl:border-t-0 md:py-4" >
-          <div className="  items-start xl:space-x-4 md:space-x-4 md:whitespace-nowrap ssm:hidden xl:block md:block">
+          {/* <div className="  items-start xl:space-x-4 md:space-x-4 md:whitespace-nowrap ssm:hidden xl:block md:block">
             <Image
               src="/logo/phone.png"
               alt="Foundation Learning"
@@ -115,6 +115,23 @@ export default function Footer() {
                 (800) 511-6948
               </p>
             </div>
+          </div> */}
+
+          <div className=" space-y-2 px-6 ssm:hidden xl:block md:block md:whitespace-nowrap">
+            <div className="flex items-center space-x-2">
+              <Image
+                src="/logo/phone.png"
+                alt="Foundation Learning"
+                width={18}
+                height={18}
+              />
+              <h3 className="text-[14px] text-[rgba(47,88,82,0.60)] uppercase font-dm-sans">
+                CALL
+              </h3>
+            </div>
+            <p className="text-[#2F5852] font-dm-sans text-[16px] font-bold ml-[20px]">
+              (800) 511-6948
+            </p>
           </div>
 
           <div className=" space-y-2 border-r border-l px-6 ssm:hidden xl:block md:block">
