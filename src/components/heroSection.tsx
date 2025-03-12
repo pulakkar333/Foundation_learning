@@ -44,15 +44,15 @@ const classes = [
 export default function HeroSection() {
   return (
     <div
-      className="w-full flex flex-col xl:pl-[80px] md:pl-[40px] lg:pl-[80px]"
+      className="w-full flex flex-col pl-[65px]"
       style={{
         background:
           "radial-gradient(71.27% 71.27% at 50% 0%, rgba(115, 169, 175, 0.50) 0%, rgba(172, 235, 243, 0.00) 100%), #D6EFF2",
       }}
     >
-      <div className="xl:mt-[100px] md:mt-[150px] ssm:mt-[150px]">
-        <div className="flex flex-col md:flex-row xl:justify-between border-l  border-[#2F58521A] lg:border-hidden md:border-hidden sm:border-[#2F58521A] sm:pl-0 sm:pb-0">
-          <h1 className="xl:text-[50px] md:text-[50px] ssm:text-[40px] text-[#12353D] font-cormorant xl:font-[500] md:font-[500] ssm:font-[500] leading-normal ssm:px-[16px] whitespace-nowrap xl:mr-[16px]">
+      <div className="ssm:mt-[150px] md:mt-[150px] xl:mt-[100px]">
+        <div className="flex flex-col md:flex-row xl:justify-between border-l border-[#2F58521A] sm:border-[#2F58521A] md:border-none lg:border-none">
+          <h1 className="xl:text-[50px] md:text-[50px] ssm:text-[40px] text-[#12353D] font-cormorant xl:font-[500] md:font-[500] ssm:font-[500] leading-normal ssm:px-[16px] whitespace-nowrap">
             Hello <em className="italic xl:font-[400]">Emma</em>,<br /> Welcome
             Back!
           </h1>

@@ -21,7 +21,7 @@ export default function Layout() {
 function Navigation({ second = false }: { second?: boolean }) {
   return (
     <header
-      className={`fixed w-full z-50 bg-white flex items-center justify-between h-[60px] font-dm xl:pl-[0px] xl:pr-[0px] transition-all duration-300 border-b-[1px] border-[#2F58521A] ${
+      className={`fixed w-full z-50 bg-white flex items-center justify-between h-[60px] font-dm xl:pl-[0px] xl:pr-[0px] transition-all duration-300 border-b-[1px] border-[#2F58521A] xl:shadow-[] ${
         second ? "top-[60px]" : "top-0"
       }`}
     >

@@ -27,8 +27,8 @@ export default function Slider({ title, data, className }: SliderProps) {
     setCurrentIndex((prev) => (prev === 0 ? data.length - 1 : prev - 1));
 
   return (
-    <div className="mt-[45px] w-full pb-0">
-      <div className="flex justify-between items-center md:px-0">
+    <div className="mt-[45px] w-full">
+      <div className="flex justify-between items-center ml-4">
         <h2
           className={`text-lg font-semibold ${className}`}
           style={{
@@ -43,9 +43,9 @@ export default function Slider({ title, data, className }: SliderProps) {
           {title}
         </h2>
 
-        <div style={{ paddingRight: "" }} className="flex gap-[8px]">
+        <div style={{ paddingRight: "" }} className="flex gap-[8.837px] pr-[80px]">
           <button
-            className="w-[38px] h-[38px] p-2 bg-white rounded-full"
+            className="w-[38px] h-[38px] p-[10px] bg-[#FFF] rounded-full"
             onClick={prevSlide}
           >
             <ArrowLeft
@@ -61,7 +61,7 @@ export default function Slider({ title, data, className }: SliderProps) {
             />
           </button>
           <button
-            className="w-auto h-[38px] p-2 bg-white rounded-full"
+            className="w-auto h-[38px] p-[10px] bg-white rounded-full"
             onClick={nextSlide}
           >
             <ArrowRight
@@ -87,7 +87,7 @@ export default function Slider({ title, data, className }: SliderProps) {
           {data.map((classItem, index) => (
             <div
               key={index}
-              className="w-full sm:w-1/1 md:w-1/1 lg:w-1/2 md:pl-[15px] relative"
+              className="w-full sm:w-1/1 md:w-1/1 lg:w-1/2 md:pl-[px] relative"
             >
               {index !== 0 && (
                 <div
@@ -101,7 +101,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                 ></div>
               )}
 
-              <div className="flex flex-col items-center pb-0 mb-[-5px] ssm:flex-row xl:px-[40px] md:px-[25px] space-x-2">
+              <div className="flex flex-col items-center ssm:flex-row px-[50px]">
                 <div className="relative">
                   {classItem.images.map((imgSrc, idx) => (
                     <Image
@@ -122,25 +122,25 @@ export default function Slider({ title, data, className }: SliderProps) {
                       }}
                     />
                   ))}
-                  <div className="absolute inset-0 flex flex-col xl:mt-[30px] md:mt-[20px] ssm:mt-[20px] gap-2 ssm:gap-6 ssm:ml-2">
+                  <div className="absolute inset-0 flex flex-col xl:mt-[30px] md:mt-[20px] ssm:mt-[20px]">
                     <Image
                       src={classItem.svgIcon}
                       alt="Custom SVG"
-                      width={41}
-                      height={32}
-                      className="text-white"
+                      width={53}
+                      height={42}
+                      className="text-white mb-2"
                     />
                     <h3
                       style={{
                         color: "#FFF",
                         fontFamily: '"Cormorant Garamond", serif',
-                        fontSize: "20px",
+                        fontSize: "24px",
                         fontStyle: "normal",
                         fontWeight: 500,
                         lineHeight: "normal",
                         marginTop: "10px",
                         textAlign: "left",
-                        marginRight: "100px",
+                        marginRight: "50px",
                       }}
                     >
                       {classItem.title}
@@ -176,7 +176,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                   </div>
 
                   <div className="flex items-center xl:space-x-[30px] md:space-x-[0px] ssm:space-x-[px] ssm:mt-[20px] xl:mt-0 md:mt-0 mb-[10px]">
-                    <div className="relative xl:w-[59px] xl:h-[59px] md:w-[59px] md:h-[59px] ssm:w-[35px] ssm:h-[35px]">
+                    <div className="relative xl:w-[70px] xl:h-[70px] md:w-[70px] md:h-[70px] ssm:w-[70px] ssm:h-[70px]">
                       <svg className="w-full h-full" viewBox="0 0 36 36">
                         <circle
                           cx="18"
@@ -184,7 +184,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                           r="16"
                           fill="none"
                           stroke="#49887F33"
-                          strokeWidth="4"
+                          strokeWidth="3"
                         />
                         <circle
                           cx="18"
@@ -192,14 +192,13 @@ export default function Slider({ title, data, className }: SliderProps) {
                           r="16"
                           fill="none"
                           stroke="#49887F"
-                          strokeWidth="4"
+                          strokeWidth="3"
                           strokeDasharray="100"
                           strokeDashoffset={100 - classItem.progress}
-                          strokeLinecap="round"
                           transform="rotate(-90 18 18)"
                         />
                       </svg>
-                      <span className="absolute inset-0 flex items-center justify-center font-semibold text-[#49887F] ssm:text-[12px] xl:text-[15px] md:text-[15px]">
+                      <span className="absolute inset-0 flex items-center justify-center font-semibold text-[#49887F] ssm:text-[12px] text-[15px]">
                         {classItem.progress}%
                       </span>
                     </div>
@@ -207,7 +206,7 @@ export default function Slider({ title, data, className }: SliderProps) {
                     <div className="relative">
                       <button className="relative flex items-center justify-center xl:w-[135px] xl:h-[40px] md:w-[135px] md:h-[40px] ssm:w-[90px] ssm:h-[35px] flex-shrink-0 rounded-[100px] border border-[#D6EFF2] bg-[#EBF7F9] font-medium">
                         <span className="text-[#ED801F] ssm:text-[12px] md:text-[15px] xl:text-[15px]  ssm:mr-3">Continue</span>
-                        <span className="absolute right-0 translate-x-1/3 bg-white rounded-full flex items-center justify-center shadow-md border border-[#D6EFF2] xl:w-[40px] xl:h-[40px] xl:mb-[4px] ssm:mb-[4px] md:mb-[4px] ssm:w-[35px] ssm:h-[35px]">
+                        <span className="absolute right-0 translate-x-1/3 bg-white rounded-full flex items-center justify-center border border-[#D6EFF2] xl:w-[40px] xl:h-[40px] xl:mb-[4px] ssm:mb-[4px] md:mb-[4px] ssm:w-[35px] ssm:h-[35px]">
                           <span className="text-[#ED801F] text-[18px] font-extrabold inline-block">
                             ▶
                           </span>
