@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Search, ChevronDown } from "lucide-react";
@@ -27,7 +28,10 @@ function Navigation({ second = false }: { second?: boolean }) {
       <div className="flex items-center flex-shrink-0 space-x-4 h-full">
         {!second && (
           <div className="md:hidden">
-            <Search className="text-[#2F5852] cursor-pointer" size={24} />
+            <Search
+              className="text-[#2F5852] cursor-pointer ssm:ml-2"
+              size={24}
+            />
           </div>
         )}
 
@@ -43,8 +47,8 @@ function Navigation({ second = false }: { second?: boolean }) {
             <Image
               src="/logo/logo.png"
               alt="Foundation Learning"
-              width={150}
-              height={30}
+              width={221}
+              height={28}
               className="lg:hidden"
             />
           </>
@@ -62,19 +66,27 @@ function Navigation({ second = false }: { second?: boolean }) {
         )}
       </div>
 
-      {!second ? (
-        <nav className="hidden xl:flex lg:hidden xl:pl-[200px] items-center flex-shrink-0 h-full">
-          <NavLinks />
-        </nav>
-      ) : (
-        <nav className="flex items-center justify-between flex-shrink-0 h-full w-full overflow-x-auto">
-          <NavLinks />
-        </nav>
-      )}
+      {/* Main Navigation (For Larger Screens) */}
+      <nav
+        className={`${
+          second ? "flex w-full" : "hidden xl:flex lg:hidden"
+        } items-center justify-between flex-shrink-0 h-full ml-auto`}
+      >
+        <NavLinks />
+      </nav>
+
+      {/* Second Navigation (Mobile and Smaller Screens) */}
+      <div
+        className={`xl:hidden ${
+          second ? "flex w-full" : "hidden"
+        } items-center justify-between w-full h-full`}
+      >
+        <NavLinks />
+      </div>
 
       {!second && (
         <div className="relative px-4">
-          <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center text-gray-700">
+          <div className="w-[40px] h-[40px] bg-[#D6EFF2] rounded-full flex items-center justify-center text-[#2F5852] text-[16px] font-bold">
             AV
           </div>
         </div>
@@ -84,6 +96,30 @@ function Navigation({ second = false }: { second?: boolean }) {
 }
 
 function NavLinks() {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+
+  const toggleDropdown = () => {
+    setDropdownOpen((prev) => !prev);
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       <Link
@@ -95,27 +131,33 @@ function NavLinks() {
 
       <Divider />
 
-      <div className="relative group">
-        <button className="text-[#2F5852] text-[16px] font-normal flex items-center h-full px-4">
+      <div className="relative" ref={dropdownRef}>
+        <button
+          className="text-[#2F5852] text-[16px] font-normal flex items-center h-full px-4"
+          onClick={toggleDropdown}
+        >
           Courses
           <ChevronDown className="ml-2" size={12} />
         </button>
 
-        <div className="absolute hidden group-hover:block bg-white shadow-md rounded-lg p-2 mt-2 w-40">
-          <Link
-            href="#"
-            className="block text-[#2F5852] p-2 hover:bg-[#D6EFF2] transition-colors duration-200"
-          >
-            Course 1
-          </Link>
-          <Link
-            href="#"
-            className="block text-[#2F5852] p-2 hover:bg-[#D6EFF2] transition-colors duration-200"
-          >
-            Course 2
-          </Link>
-        </div>
+        {dropdownOpen && (
+          <div className="absolute bg-white shadow-md rounded-lg p-2 mt-2 w-40">
+            <Link
+              href="#"
+              className="block text-[#2F5852] p-2 hover:bg-[#D6EFF2] transition-colors duration-200"
+            >
+              Course 1
+            </Link>
+            <Link
+              href="#"
+              className="block text-[#2F5852] p-2 hover:bg-[#D6EFF2] transition-colors duration-200"
+            >
+              Course 2
+            </Link>
+          </div>
+        )}
       </div>
+
       <Divider />
 
       <Link

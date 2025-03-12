@@ -7,7 +7,7 @@ const classes = [
     title: "Fourth Grade Social Studies",
     progress: 35,
     color: "bg-indigo-500",
-    topic: "English colonies",
+    topic: "English colonies in North America",
     images: ["/logo/cover-back.png", "/logo/pages.png", "/logo/Frame_1.png"],
     code: "SS-G4",
     svgIcon: "/logo/people-arrows.svg",
@@ -16,7 +16,7 @@ const classes = [
     title: "Fourth Grade Math",
     progress: 13,
     color: "bg-green-500",
-    topic: "Algebra Basics",
+    topic: "Place Value",
     images: ["/logo/cover-back-2.png", "/logo/pages.png", "/logo/Frame_2.png"],
     code: "MA-G4",
     svgIcon: "/logo/function.svg",
@@ -25,13 +25,13 @@ const classes = [
     title: "Fourth Grade Language Arts",
     progress: 25,
     color: "bg-blue-500",
-    topic: "Physics & Chemistry",
+    topic: "Text Structure",
     images: ["/logo/cover-back-3.png", "/logo/pages.png", "/logo/Frame_3.png"],
     code: "SCI-G4",
     svgIcon: "/logo/input-text.svg",
   },
   {
-    title: "Fourth Grade Social Studies",
+    title: "Fourth Grade Science",
     progress: 35,
     color: "bg-indigo-500",
     topic: "English Colonies",
@@ -39,30 +39,12 @@ const classes = [
     code: "SS-G4",
     svgIcon: "/logo/people-arrows.svg",
   },
-  {
-    title: "Fourth Grade Math",
-    progress: 60,
-    color: "bg-green-500",
-    topic: "Algebra Basics",
-    images: ["/logo/cover-back-2.png", "/logo/pages.png", "/logo/Frame_2.png"],
-    code: "MA-G4",
-    svgIcon: "/logo/function.svg",
-  },
-  {
-    title: "Fourth Grade Language Arts",
-    progress: 75,
-    color: "bg-blue-500",
-    topic: "Physics & Chemistry",
-    images: ["/logo/cover-back-3.png", "/logo/pages.png", "/logo/Frame_3.png"],
-    code: "SCI-G4",
-    svgIcon: "/logo/input-text.svg",
-  },
 ];
 
 export default function HeroSection() {
   return (
     <div
-      className="w-full flex flex-col px-4 md:px-[38px] lg:px-[80px] bg-transparent"
+      className="w-full flex flex-col xl:pl-[80px] md:pl-[40px] lg:pl-[80px]"
       style={{
         background:
           "radial-gradient(71.27% 71.27% at 50% 0%, rgba(115, 169, 175, 0.50) 0%, rgba(172, 235, 243, 0.00) 100%), #D6EFF2",
@@ -70,8 +52,9 @@ export default function HeroSection() {
     >
       <div className="xl:mt-[100px] md:mt-[150px] ssm:mt-[150px]">
         <div className="flex flex-col md:flex-row xl:justify-between border-l  border-[#2F58521A] lg:border-hidden md:border-hidden sm:border-[#2F58521A] sm:pl-0 sm:pb-0">
-          <h1 className="xl:text-[50px] md:text-[50px] ssm:text-[40px] text-[#12353D] font-cormorant xl:font-[500] md:font-[500] ssm:font-[500] leading-normal ssm:px-[16px] whitespace-nowrap">
-            Hello <em className="italic xl:font-[400]">Emma</em>,<br/> Welcome Back!
+          <h1 className="xl:text-[50px] md:text-[50px] ssm:text-[40px] text-[#12353D] font-cormorant xl:font-[500] md:font-[500] ssm:font-[500] leading-normal ssm:px-[16px] whitespace-nowrap xl:mr-[16px]">
+            Hello <em className="italic xl:font-[400]">Emma</em>,<br /> Welcome
+            Back!
           </h1>
 
           <div className="w-auto xl:border-l md:border-l lg:border-l md:pl-[20px] md:pr-[20px] md:mt-0 py-4 order-2 md:order-1 border-[#2F58521A] ssm:border-t ssm:border-b md:border-0 xl:border-0 ssm:px-[16px]">
