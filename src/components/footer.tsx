@@ -3,32 +3,29 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer
-      className="bg-[#F5FBFC] text-gray-800 xl:px-[50px] xl:py-[0px] md:px-[50px] md:py-[25px] xl:w-auto"
+      className="bg-[#F5FBFC] text-gray-800 xl:w-auto md:px-[40px]"
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <div className="container md:flex md:flex-row xl:text-[12px] xl:space-x-[20px] xl:justify-center xl:border-b xl:pb-[30px] md:pb-[30px]">
-        {/* Subjects Section */}
+      <div className="container md:flex md:flex-row xl:text-[12px] xl:space-x-[25px] xl:justify-center xl:border-b xl:pb-[30px] md:pb-[30px]">
         <div className="ssm:mt-[24px] xl:mt-[24px] ssm:pl-[16px]">
           <h3 className="font-normal text-left uppercase text-[14px] font-dm text-[rgba(47,88,82,0.60)] mb-[7px]">
             SUBJECTS
           </h3>
           <div className="flex flex-row items-start xl:gap-x-[10px] md:flex-col xl:flex-row md:gap-y-4 xl:w-auto ssm:gap-x-[40px]">
-            {/* First UL */}
             <ul className="text-[#2F5852] text-[16px] font-dm-sans leading-normal xl:w-[220px] xl:h-[145px] space-y-2 md:w-full">
-              <li className="whitespace-nowrap">Math</li>
-              <li className="whitespace-nowrap">Science</li>
-              <li className="whitespace-nowrap">English Language</li>
-              <li className="whitespace-nowrap">Homeschool Support</li>
-              <li className="whitespace-nowrap">Study Skills</li>
+              <li className="">Math</li>
+              <li className="">Science</li>
+              <li className="">English Language</li>
+              <li className="">Homeschool Support</li>
+              <li className="">Study Skills</li>
             </ul>
 
-            {/* Second UL */}
-            <ul className="text-[#2F5852] xl:text-[16px] font-dm leading-normal xl:w-[200px] xl:h-[145px] space-y-2 md:w-full">
-              <li className="whitespace-nowrap">Algebra</li>
-              <li className="whitespace-nowrap">Geometry</li>
-              <li className="whitespace-nowrap">Precalculus</li>
-              <li className="whitespace-nowrap">Calculus</li>
-              <li className="whitespace-nowrap">Homework Help</li>
+            <ul className="text-[#2F5852] xl:text-[16px] font-dm xl:w-[200px] xl:h-[145px] space-y-2 md:w-full">
+              <li className="">Algebra</li>
+              <li className="">Geometry</li>
+              <li className="">Precalculus</li>
+              <li className="">Calculus</li>
+              <li className="">Homework Help</li>
             </ul>
           </div>
         </div>
@@ -79,45 +76,30 @@ export default function Footer() {
       <div className="xl:mt-[10px] md:mt-[0px] xl:mb-[0px] md:mb-[0px]"></div>
       {/* Footer Bottom Section */}
 
-      <div className="container mx-auto grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-        <div className="order-2 ssm:order-2 md:order-2 xl:order-1 flex ssm:flex-col xl:flex-col md:flex-row items-center md:items-start md:gap-[50px] lg:gap-[100px] xl:gap-0 xl:border-0 ssm:ml-10 ssm:border-t md:border-t-0">
+      <div className="container mx-auto grid gap-6 md:grid-cols-2 xl:grid-cols-4 py-[24px]">
+        <div className="order-2 ssm:order-2 md:order-2 xl:order-1 flex ssm:flex-col xl:flex-col md:flex-row md:items-start">
+          {/* Logo Image */}
           <Image
-            className="xl:border-b ssm:mr-10 mt-[24px]"
+            className="xl:border-b ssm:mr-10"
             src="/logo/logo.png"
             alt="Foundation Learning"
             width={276.818}
             height={35}
           />
-          <div className="mt-[10px] flex flex-col md:flex-col ssm:flex md:border-l xl:border-l-0">
+
+          {/* Child Div with Middle Border */}
+          <div className="flex flex-col md:flex-col ssm:flex md:border-l md:pl-[60px] xl:border-0 xl:pl-0">
             <p className="text-[#2F5852] text-[16px] font-dm-sans md:whitespace-nowrap ssm:whitespace-nowrap">
               Terms and Conditions &bull; Privacy Policy
             </p>
-            <p className="mt-[10px] md:mt-0 text-[rgba(47,88,82,0.60)] text-[16px] font-dm-sans md:whitespace-nowrap ssm:whitespace-nowrap">
+            <p className="md:mt-0 text-[rgba(47,88,82,0.60)] text-[16px] font-dm-sans md:whitespace-nowrap ssm:whitespace-nowrap">
               &copy;Copyright {new Date().getFullYear()} Foundation Learning
             </p>
           </div>
         </div>
 
-        <div className="order-1 ssm:order-1 md:order-1 xl:order-2 flex justify-end space-x-12 col-span-3 md:border-b md:border-t xl:border-b-0 xl:border-t-0 md:py-4" >
-          {/* <div className="  items-start xl:space-x-4 md:space-x-4 md:whitespace-nowrap ssm:hidden xl:block md:block">
-            <Image
-              src="/logo/phone.png"
-              alt="Foundation Learning"
-              width={18}
-              height={18}
-              className=""
-            />
-            <div className="">
-              <h3 className="text-[14px] text-[rgba(47,88,82,0.60)] uppercase font-dm-sans">
-                CALL
-              </h3>
-              <p className="text-[#2F5852] font-dm-sans text-[16px] font-bold">
-                (800) 511-6948
-              </p>
-            </div>
-          </div> */}
-
-          <div className=" space-y-2 px-6 ssm:hidden xl:block md:block md:whitespace-nowrap">
+        <div className="order-1 ssm:order-1 md:order-1 xl:order-2 flex justify-end space-x-12 col-span-3 md:border-b md:border-t xl:border-b-0 xl:border-t-0 md:py-4">
+          <div className=" space-y-2 ssm:hidden xl:block md:block">
             <div className="flex items-center space-x-2">
               <Image
                 src="/logo/phone.png"
@@ -129,12 +111,12 @@ export default function Footer() {
                 CALL
               </h3>
             </div>
-            <p className="text-[#2F5852] font-dm-sans text-[16px] font-bold ml-[20px]">
+            <p className="text-[#2F5852] font-dm-sans text-[16px] font-bold ml-[20px] md:whitespace-nowrap">
               (800) 511-6948
             </p>
           </div>
 
-          <div className=" space-y-2 border-r border-l px-6 ssm:hidden xl:block md:block">
+          <div className="space-y-2 border-l border-r px-[24px] ssm:hidden xl:block md:block md:border-0 xl:border-l xl:border-r">
             <div className="flex items-center space-x-2">
               <Image
                 src="/logo/message.png"
@@ -149,7 +131,7 @@ export default function Footer() {
             <p className="text-[#2F5852] font-dm-sans text-[16px] font-bold ml-[20px]">
               (800) 511-6948
             </p>
-            <p className="text-[rgba(47,88,82,0.60)] text-[12px] font-dm-sans ml-[20px] xl:w-[291px] xl:h-[64px]">
+            <p className="text-[rgba(47,88,82,0.60)] text-[12px] font-dm-sans ml-[20px] md:w-[264px] md:h-[64px] xl:w-[291px] xl:h-[64px]">
               By calling or texting (800) 511-6948, customers agree to receive
               text messages. If you no longer wish to receive text messages, you
               may opt-out at any time by replying &quot;STOP&quot;

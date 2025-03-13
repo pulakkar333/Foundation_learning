@@ -22,7 +22,7 @@ const ClassCard: React.FC<ClassCardProps> = ({
       }`}
     >
       <h3 className="all-classes-title">{title}</h3>
-      <div className="flex items-center mt-2 w-full gap-[10px]">
+      <div className="flex items-center mt-[10px] w-full gap-[7px]">
         <span className="all-classes-code">{code}</span>
         <button className="all-classes-button">•••</button>
       </div>
@@ -125,7 +125,7 @@ const AllClasses: React.FC = () => {
 
   return (
     <div
-      className="relative w-full xl:px-[80px] md:px-[40px] lg:px-[40px] sm:px-[40px]"
+      className="relative w-full md:px-[40px] md:mt-[60px] xl:mt-[60px] xl:px-[80px]" 
       style={{ fontFamily: "Cormorant Garamond, serif" }}
     >
       <div className="all-classes-header ssm:hidden xl:flex md:flex items-center justify-between">
@@ -154,10 +154,10 @@ const AllClasses: React.FC = () => {
           </div>
         ))}
       </div>
-     
-      <div className="xl:mt-[50px] md:mt-[50px]">
+
+      {/* <div className="">
         <BookGrid />
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navigation from "../components/navigiation";
 import HeroSection from "../components/heroSection";
 import AllClasses from "../components/allClasses";
+import BookGrid from "../components/bookGrid";
 import PersonalizedTutoring from "../components/personalizedTutoring";
 import Footer from "../components/footer";
 
@@ -19,7 +20,8 @@ export default function Page() {
         <HeroSection />
         <AllClasses />
       </main>
-      <main className="px-4 mt-[40px] rounded ssm:px-[10px] md:px-[40px] xl:px-[80px] xl:mt-[60px] md:mb-[60px] xl:mb-[60px]">
+      <BookGrid />
+      <main className="md:px-[42px] md:py-[60px] xl:px-[80px] xl:py-[60px]">
         <PersonalizedTutoring />
       </main>
       <Footer />
@@ -30,7 +32,7 @@ export default function Page() {
           marginRight: "20px",
         }}
       >
-        <button
+        {/* <button
           className="relative flex items-center justify-center w-[124px] h-[40px] flex-shrink-0 rounded-[100px] border border-[#FFCFA4] bg-[#FDF0E4] text-sm font-medium"
           style={{
             boxShadow: "0px -10px 30px -10px rgba(237, 128, 31, 0.70)",
@@ -73,7 +75,7 @@ export default function Page() {
               }}
             ></span>
           </span>
-        </button>
+        </button> */}
       </div>
     </div>
   );

@@ -41,7 +41,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 8px 10px;
-  margin-top: 60px;
 }
 
 .all-classes-main-title {
@@ -134,7 +133,6 @@ body {
   height: 32px;
   border-radius: 9999px;
   background-color: #FFF48F;
-  margin-right: 8px;
   font-family: "DM Sans", sans-serif;
   align-items: center;
   justify-content: center;
@@ -244,6 +242,7 @@ body {
   letter-spacing: -0.54px;
   text-overflow: ellipsis;
   margin-top:5px;
+  font-family: "Cormorant Garamond", serif;
 }
 
 /* -------------- End BookGrid.css */
