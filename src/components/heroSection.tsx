@@ -30,15 +30,7 @@ const classes = [
     code: "SCI-G4",
     svgIcon: "/logo/input-text.svg",
   },
-  {
-    title: "Fourth Grade Science",
-    progress: 35,
-    color: "bg-indigo-500",
-    topic: "English Colonies",
-    images: ["/logo/cover-back.png", "/logo/pages.png", "/logo/Frame_1.png"],
-    code: "SS-G4",
-    svgIcon: "/logo/people-arrows.svg",
-  },
+
 ];
 
 export default function HeroSection() {
