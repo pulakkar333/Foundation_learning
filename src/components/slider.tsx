@@ -94,7 +94,7 @@ export default function Slider({ title, data }: SliderProps) {
                 ></div>
               )}
 
-              <div className="flex flex-col items-center ssm:flex-row ssm:px-[35px] md:px-[40px] xl:px-[50px]">
+              <div className="flex flex-col items-center ssm:flex-row ssm:px-[20px] md:px-[40px] xl:px-[50px]">
                 <div className="relative">
                   {classItem.images.map((imgSrc, idx) => (
                     <Image
