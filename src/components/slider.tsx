@@ -28,7 +28,7 @@ export default function Slider({ title, data, className }: SliderProps) {
 
   return (
     <div className="mt-[45px] w-full">
-      <div className="xl:flex xl:justify-between ssm:flex ssm:justify-between items-center xl:ml-[20px]">
+      <div className="xl:flex xl:justify-between ssm:flex ssm:justify-between items-center ssm:ml-0 xl:ml-[20px]">
         <h2 className="ssm:text-[30px] md:ml-[20px] xl:text-[35px] text-[#12353D] font-cormorant ">
           {title}
         </h2>
@@ -94,40 +94,43 @@ export default function Slider({ title, data, className }: SliderProps) {
                 ></div>
               )}
 
-              <div className="flex flex-col items-center ssm:flex-row ssm:px-[15px] md:px-[40px] xl:px-[50px]">
+              <div className="flex flex-col items-center ssm:flex-row ssm:px-[35px] md:px-[40px] xl:px-[50px]">
                 <div className="relative">
                   {classItem.images.map((imgSrc, idx) => (
                     <Image
                       key={idx}
                       src={imgSrc}
                       alt={`Image ${idx + 1} - ${classItem.title}`}
-                      width={161}
-                      height={256}
-                      className={`absolute  ${
-                        idx === 0
-                          ? "relative top-[6px] right-[14px]" 
-                          : idx === 1
-                          ? "bottom-0 left-[-16px]"
-                          : "bottom-0 right-[20px]"
-                      }`}
-                      style={{
-                        maxWidth: "none",
-                      }}
+                      width={161} // Default width (required)
+                      height={256} // Default height (required)
+                      className={`absolute 
+      ${
+        idx === 0
+          ? "relative top-[6px] right-[14px]"
+          : idx === 1
+          ? "bottom-0 left-[-16px]"
+          : "bottom-0 right-[20px]"
+      }
+      xl:w-[161px] xl:h-[226px] 
+      md:w-[161px] md:h-[226px] 
+      ssm:w-[132px] ssm:h-[195px]`}
+                      style={{ maxWidth: "none" }}
                     />
                   ))}
+
                   <div className="absolute inset-0 flex flex-col xl:mt-[30px] md:mt-[20px] ssm:mt-[20px]">
                     <Image
                       src={classItem.svgIcon}
                       alt="Custom SVG"
                       width={53}
                       height={42}
-                      className="text-white mb-2"
+                      className="text-white mb-2 xl:w-[53px] xl:h-[42px] md:w-[53px] md:h-[42px] ssm:w-[41px] ssm:h-[32px]"
                     />
+
                     <h3
+                      className="xl:text-[24px] md:text-[24px] ssm:text-[20px] text-white"
                       style={{
-                        color: "#FFF",
                         fontFamily: '"Cormorant Garamond", serif',
-                        fontSize: "24px",
                         fontStyle: "normal",
                         fontWeight: 500,
                         lineHeight: "normal",
@@ -168,8 +171,8 @@ export default function Slider({ title, data, className }: SliderProps) {
                     </h3>
                   </div>
 
-                  <div className="flex items-center xl:space-x-[30px] md:space-x-[48px] ssm:space-x-[px] ssm:mt-[20px] xl:mt-0 md:mt-0 mb-[10px]">
-                    <div className="relative xl:w-[70px] xl:h-[70px] md:w-[70px] md:h-[70px] ssm:w-[70px] ssm:h-[70px]">
+                  <div className="flex items-center xl:space-x-[30px] md:space-x-[48px] ssm:space-x-[5px] ssm:mt-[20px] xl:mt-0 md:mt-0 mb-[10px]">
+                    <div className="relative xl:w-[70px] xl:h-[70px] md:w-[70px] md:h-[70px] ssm:w-[40px] ssm:h-[40px]">
                       <svg className="w-full h-full" viewBox="0 0 36 36">
                         <circle
                           cx="18"
@@ -197,11 +200,11 @@ export default function Slider({ title, data, className }: SliderProps) {
                     </div>
 
                     <div className="relative">
-                      <button className="relative flex items-center justify-center ssm:w-[90px] ssm:h-[35px] md:w-[135px] md:h-[40px] xl:w-[135px] xl:h-[40px] flex-shrink-0 rounded-[100px] border border-[#D6EFF2] bg-[#EBF7F9] font-medium">
-                        <span className="text-[#ED801F] ssm:text-[12px] md:text-[15px] xl:text-[15px]  ssm:mr-3">
+                      <button className="relative flex items-center justify-center ssm:w-[127px] ssm:h-[40px] md:w-[135px] md:h-[40px] xl:w-[135px] xl:h-[40px] flex-shrink-0 rounded-[100px] border border-[#D6EFF2] bg-[#EBF7F9] font-medium shadow-lg">
+                        <span className="text-[#ED801F] ssm:text-[15px] md:text-[15px] xl:text-[15px] ssm:mr-[28px]">
                           Continue
                         </span>
-                        <span className="absolute right-0 translate-x-1/3 bg-white rounded-full flex items-center justify-center border border-[#D6EFF2] xl:w-[42px] xl:h-[42px] md:w-[42px] md:h-[42px] xl:mb-[4px] ssm:mb-[4px] md:mb-[4px] ssm:w-[35px] ssm:h-[35px] shadow-xl">
+                        <span className="absolute ssm:mr-[14px] md:mr-[5px] xl:mr-[5px] right-0 translate-x-1/3 bg-white rounded-full flex items-center justify-center border border-[#D6EFF2] xl:w-[40px] xl:h-[40px] md:w-[42px] md:h-[42px] ssm:w-[40px] ssm:h-[40px] shadow-lg">
                           <span className="text-[#ED801F] text-[18px] font-extrabold inline-block">
                             ▶
                           </span>

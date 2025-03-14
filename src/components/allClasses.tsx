@@ -65,11 +65,11 @@ const ClassSelector: React.FC<ClassSelectorProps> = ({
             {selectedClass?.title}
           </h2>
         </div>
-        <div className="flex items-center space-x-2">
-          <MoreVertical className="text-gray-500 cursor-pointer" size={20} />
+        <div className="flex flex-col items-center space-y-4">
+          <button className="all-classes-button">•••</button>
           <ChevronDown
-            className="text-gray-500 cursor-pointer"
-            size={20}
+            className="text-[#12353D] cursor-pointer"
+            size={30}
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           />
         </div>
@@ -79,11 +79,14 @@ const ClassSelector: React.FC<ClassSelectorProps> = ({
           {classes.map((classData) => (
             <div
               key={classData.code}
-              className="p-3 hover:bg-gray-100 cursor-pointer flex justify-between"
+              className="p-3 hover:bg-gray-100 cursor-pointer flex flex-col border-b"
               onClick={() => handleClassSelect(classData)}
             >
-              <span className="text-gray-800">{classData.title}</span>
-              <span className="text-gray-500 text-xs">{classData.code}</span>
+              <span className="all-classes-code">{classData.code}</span>
+
+              <span className="text-[24px] text-[#12353D] ">
+                {classData.title}
+              </span>
             </div>
           ))}
         </div>
@@ -125,7 +128,7 @@ const AllClasses: React.FC = () => {
 
   return (
     <div
-      className="relative w-full md:px-[40px] md:mt-[60px] xl:mt-[60px] xl:px-[80px]" 
+      className="relative w-full md:px-[40px] md:mt-[60px] xl:mt-[60px] xl:px-[80px]"
       style={{ fontFamily: "Cormorant Garamond, serif" }}
     >
       <div className="all-classes-header ssm:hidden xl:flex md:flex items-center justify-between">

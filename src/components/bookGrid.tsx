@@ -96,10 +96,10 @@ const books = [
 
 const BookGrid = () => {
   return (
-    <div className="book-grid ssm:grid-cols-3 md:grid-cols-5 md:px-[40px] md:mt-[50px] xl:grid-cols-6 xl:pl-[80px] xl:mt-[50px] xl:gap-[40px]">
+    <div className="book-grid ssm:grid-cols-3 ssm:mt-[20px] md:grid-cols-5 md:px-[40px] md:mt-[50px] xl:grid-cols-6 xl:pl-[80px] xl:mt-[50px] xl:gap-[40px]">
       {books.map((book, index) => (
         <div key={index} className="book-card">
-          <div className="book-image-wrapper md:w-[121px] md:h-[161px] xl:w-[142px] xl:h-[190px] ssm:w-[95px] ssm:h-[127px]">
+          <div className="book-image-wrapper ssm:w-[95px] ssm:h-[127px] md:w-[121px] md:h-[161px] xl:w-[142px] xl:h-[190px]">
             <Image
               width={142}
               height={190}

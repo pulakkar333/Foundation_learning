@@ -21,7 +21,7 @@ export default function Page() {
         <AllClasses />
       </main>
       <BookGrid />
-      <main className="md:px-[42px] md:py-[60px] xl:px-[80px] xl:py-[60px]">
+      <main className="ssm:px-[10px] ssm:py-[40px] md:px-[42px] md:py-[60px] xl:px-[80px] xl:py-[60px]">
         <PersonalizedTutoring />
       </main>
       <Footer />

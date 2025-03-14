@@ -36,7 +36,7 @@ const classes = [
 export default function HeroSection() {
   return (
     <div
-      className="w-full flex flex-col ssm:px-[16px] md:pl-[40px] xl:pl-[65px]"
+      className="w-full flex flex-col ssm:px-[10px] ssm:ml-0 md:pl-[40px] xl:pl-[65px]"
       style={{
         background:
           "radial-gradient(71.27% 71.27% at 50% 0%, rgba(115, 169, 175, 0.50) 0%, rgba(172, 235, 243, 0.00) 100%), #D6EFF2",
