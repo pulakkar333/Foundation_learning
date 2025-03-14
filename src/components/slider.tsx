@@ -171,7 +171,7 @@ export default function Slider({ title, data }: SliderProps) {
                     </h3>
                   </div>
 
-                  <div className="flex items-center xl:space-x-[30px] md:space-x-[48px] ssm:space-x-[5px] ssm:mt-[20px] xl:mt-0 md:mt-0 mb-[10px]">
+                  <div className="flex items-center xl:space-x-[30px] md:space-x-[48px] ssm:space-x-[10px] ssm:mt-[20px] xl:mt-0 md:mt-0 mb-[10px]">
                     <div className="relative xl:w-[70px] xl:h-[70px] md:w-[70px] md:h-[70px] ssm:w-[40px] ssm:h-[40px]">
                       <svg className="w-full h-full" viewBox="0 0 36 36">
                         <circle
@@ -204,7 +204,7 @@ export default function Slider({ title, data }: SliderProps) {
                         <span className="text-[#ED801F] ssm:text-[15px] md:text-[15px] xl:text-[15px] ssm:mr-[28px]">
                           Continue
                         </span>
-                        <span className="absolute ssm:mr-[14px] md:mr-[5px] xl:mr-[5px] right-0 translate-x-1/3 bg-white rounded-full flex items-center justify-center border border-[#D6EFF2] xl:w-[40px] xl:h-[40px] md:w-[42px] md:h-[42px] ssm:w-[40px] ssm:h-[40px] shadow-lg">
+                        <span className="absolute ssm:mr-[10px] md:mr-[5px] xl:mr-[5px] right-0 translate-x-1/3 bg-white rounded-full flex items-center justify-center border border-[#D6EFF2] xl:w-[40px] xl:h-[40px] md:w-[42px] md:h-[42px] ssm:w-[40px] ssm:h-[40px] shadow-lg">
                           <span className="text-[#ED801F] text-[18px] font-extrabold inline-block">
                             ▶
                           </span>
