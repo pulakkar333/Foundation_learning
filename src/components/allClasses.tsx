@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import BookGrid from "../components/bookGrid";
-import { ArrowRight, ArrowLeft, MoreVertical, ChevronDown } from "lucide-react";
+import { ArrowRight, ArrowLeft, ChevronDown } from "lucide-react";
 
 interface ClassCardProps {
   title: string;
@@ -157,10 +156,6 @@ const AllClasses: React.FC = () => {
           </div>
         ))}
       </div>
-
-      {/* <div className="">
-        <BookGrid />
-      </div> */}
     </div>
   );
 };
